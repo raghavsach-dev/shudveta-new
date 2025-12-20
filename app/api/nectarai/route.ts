@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from "next/server";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import { NECTARAI_SYSTEM_PROMPT } from "@/lib/nectarAiPrompt";
 
+export const runtime = 'edge';
+
 interface ChatMessage {
   role: "user" | "assistant";
   content: string;

@@ -395,3 +395,11 @@ export default function ProjectDetail({ params }: PageProps) {
     </div>
   );
 }
+
+export async function generateStaticParams() {
+  return [
+    { project: '1' },
+    { project: '2' },
+    { project: '3' }
+  ];
+}
