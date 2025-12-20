@@ -54,3 +54,29 @@ body {
   animation: gradientFlow 3s ease infinite;
   background: linear-gradient(45deg, #60a5fa, #a855f7, #6366f1, #3b82f6);
 }
+
+/* Random Gradient Animation */
+@keyframes gradientRandom {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 100% 0%;
+  }
+  50% {
+    background-position: 50% 100%;
+  }
+  75% {
+    background-position: 0% 100%;
+  }
+}
+
+/* Hide default scrollbars */
+::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
