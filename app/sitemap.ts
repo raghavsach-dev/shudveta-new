@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://shudveta.com'
+  const baseUrl = 'https://shudveta.in'
 
   // Static pages
   const staticPages = [
@@ -41,6 +41,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/portfolio/2`,
+      lastModified: new Date('2024-12-21'),
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/portfolio/3`,
       lastModified: new Date('2024-12-21'),
       changeFrequency: 'monthly' as const,
       priority: 0.7,
