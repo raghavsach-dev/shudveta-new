@@ -63,6 +63,46 @@ const PROJECTS = [
     ],
     technologies: ["Next.js", "Sanity CMS", "Stripe", "Vercel", "Tailwind CSS"],
     year: "2024"
+  },
+  {
+    id: 4,
+    title: "FSK Foil Products Website",
+    category: "Industrial Solutions",
+    description:
+      "Specialized website for Foil-Scrim-Kraft (FSK) products used in insulation industry, featuring comprehensive product information and industry applications.",
+    longDescription:
+      "That website is focused on Foil-Scrim-Kraft (FSK) products, which are materials commonly used in the insulation industry. FSK is a laminated composite, usually made from an aluminum foil layer, fiberglass scrim for reinforcement, and a layer of natural kraft paper. Its primary role is to act as a durable, fire-resistant facing for insulation blankets and duct wraps. Essentially, it helps cover the insulation and serves as an excellent vapor retarder to improve energy efficiency.",
+    image: "/fskfoil.png",
+    features: [
+      "Comprehensive product information",
+      "Industry applications showcase",
+      "Technical specifications",
+      "Contact forms for inquiries",
+      "SEO optimization for industrial search",
+      "Mobile-responsive design"
+    ],
+    technologies: ["Next.js", "Tailwind CSS", "Node.js", "Vercel", "Cloudinary"],
+    year: "2024"
+  },
+  {
+    id: 5,
+    title: "Ridezo Transportation Platform",
+    category: "Transportation Solutions",
+    description:
+      "Comprehensive transportation platform offering pre-booked, reliable rides for daily commuting, office travel, city rides, family trips, and outstation travel with transparent pricing.",
+    longDescription:
+      "Goridezo.com is a website for Ridezo, which is a service offering pre-booked, reliable transportation. They focus on making daily commuting stress-free, especially for office goers, but also cover city rides, family trips, and outstation travel. They offer transparent pricing with options like weekly/monthly office subscriptions or per-km city ride fares. Basically, it's a ride service for both planned and on-demand travel with professional drivers.",
+    image: "/ridezo.png",
+    features: [
+      "Pre-booked transportation service",
+      "Office commute subscriptions",
+      "City and outstation ride options",
+      "Transparent pricing model",
+      "Professional driver network",
+      "GPS tracking and safety features"
+    ],
+    technologies: ["Next.js", "Tailwind CSS", "Node.js", "Firebase", "Google Maps API", "Stripe"],
+    year: "2024"
   }
 ];
 
@@ -155,6 +195,10 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                     ? "https://lubeckexports.com"
                     : project.id === 3
                     ? "https://smartethnics.com"
+                    : project.id === 4
+                    ? "https://fsk-foil.pages.dev"
+                    : project.id === 5
+                    ? "https://goridezo.com"
                     : "#"
                 }
                 target="_blank"
@@ -184,6 +228,10 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                 ? "The Lubeck Exports E-commerce Platform, developed by Shudveta IT Solutions, was built using Next.js, Tailwind CSS, and Firebase, with real-time stock integration via third-party APIs. Designed for automation, scalability, and seamless user experience, it delivers a modern digital marketplace that streamlines export operations and maximizes business efficiency."
                 : project.id === 3
                 ? "The Smart Ethnics E-commerce Platform, developed by Shudveta IT Solutions, was built using Next.js, Tailwind CSS, and Firebase, with secure payment integration via Razorpay. Designed for performance, security, and seamless user experience, it delivers a complete online store that transforms apparel business operations into a digital-first marketplace."
+                : project.id === 4
+                ? "The FSK Foil Products Website, developed by Shudveta IT Solutions, was built using Next.js and Tailwind CSS to showcase specialized Foil-Scrim-Kraft (FSK) products used in the insulation industry. Designed for comprehensive product information and industry applications, it delivers a professional platform that highlights FSK's role as a durable, fire-resistant facing for insulation blankets and duct wraps."
+                : project.id === 5
+                ? "The Ridezo Transportation Platform, developed by Shudveta IT Solutions, was built using Next.js and Tailwind CSS to provide a comprehensive transportation booking system. Designed for pre-booked rides, office subscriptions, and transparent pricing, it delivers a reliable platform that connects users with professional drivers for daily commuting and travel needs."
                 : `${project.category} • ${project.year}`
               }
             </p>
@@ -861,6 +909,400 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                       <div className="summary-item">
                         <span className="summary-label">Focus:</span>
                         <span className="summary-value">Secure Payments, Real-time Data, Responsive Design, and Performance</span>
+                      </div>
+                    </div>
+                  </div>
+                </>
+              ) : projectId === 4 ? (
+                <>
+                  {/* FSK Foil Content */}
+                  {/* Introduction */}
+                  <div className="blog-intro mb-12">
+                    <p className="text-xl leading-relaxed text-gray-700 font-medium">
+                      The FSK Foil Products Website was developed by Shudveta IT Solutions to create a specialized platform for showcasing Foil-Scrim-Kraft (FSK) products used in the insulation industry. The goal was to build an informative, professional website that educates visitors about FSK materials and their applications in modern insulation systems.
+                    </p>
+                  </div>
+
+                  {/* Tech Stack Section */}
+                  <div className="blog-section mb-16">
+                    <div className="section-header mb-8">
+                      <div className="flex items-center gap-4 mb-3">
+                        <div className="icon-wrapper">
+                          <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                          </svg>
+                        </div>
+                        <h3 className="section-title">Tech Stack Overview</h3>
+                      </div>
+                      <div className="section-divider"></div>
+                    </div>
+
+                    <div className="tech-stack-grid">
+                      <div className="tech-item">
+                        <div className="tech-label">Frontend:</div>
+                        <div className="tech-value">Next.js, Tailwind CSS</div>
+                      </div>
+                      <div className="tech-item">
+                        <div className="tech-label">Backend:</div>
+                        <div className="tech-value">Node.js, Express.js</div>
+                      </div>
+                      <div className="tech-item">
+                        <div className="tech-label">Media Handling:</div>
+                        <div className="tech-value">Cloudinary</div>
+                      </div>
+                      <div className="tech-item">
+                        <div className="tech-label">Hosting & Deployment:</div>
+                        <div className="tech-value">Vercel</div>
+                      </div>
+                      <div className="tech-item">
+                        <div className="tech-label">Version Control:</div>
+                        <div className="tech-value">Git + GitHub</div>
+                      </div>
+                      <div className="tech-item">
+                        <div className="tech-label">Database:</div>
+                        <div className="tech-value">Firebase Firestore</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Development Approach Section */}
+                  <div className="blog-section mb-16">
+                    <div className="section-header mb-8">
+                      <div className="flex items-center gap-4 mb-3">
+                        <div className="icon-wrapper">
+                          <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                          </svg>
+                        </div>
+                        <h3 className="section-title">Development Approach</h3>
+                      </div>
+                      <div className="section-divider"></div>
+                    </div>
+
+                    <div className="approach-content space-y-6">
+                      <p className="text-gray-700 leading-relaxed">
+                        The website was built with a focus on technical accuracy and industry relevance. We structured the content to educate visitors about FSK products, their composition, and applications in insulation systems.
+                      </p>
+                      <p className="text-gray-700 leading-relaxed">
+                        Next.js provided server-side rendering for better SEO, ensuring the technical content ranks well in industrial searches. Tailwind CSS enabled a clean, professional design that maintains readability while presenting complex technical information.
+                      </p>
+                      <p className="text-gray-700 leading-relaxed">
+                        Contact forms were integrated to allow potential clients to inquire about FSK products, with Firebase handling form submissions and data storage.
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Core Features Section */}
+                  <div className="blog-section mb-16">
+                    <div className="section-header mb-8">
+                      <div className="flex items-center gap-4 mb-3">
+                        <div className="icon-wrapper">
+                          <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                          </svg>
+                        </div>
+                        <h3 className="section-title">Core Features Implemented</h3>
+                      </div>
+                      <div className="section-divider"></div>
+                    </div>
+
+                    <div className="features-list space-y-4">
+                      <div className="feature-item">
+                        <div className="feature-bullet"></div>
+                        <div className="feature-content">
+                          <span className="feature-label">Product Information:</span> Comprehensive details about FSK composition and properties.
+                        </div>
+                      </div>
+                      <div className="feature-item">
+                        <div className="feature-bullet"></div>
+                        <div className="feature-content">
+                          <span className="feature-label">Industry Applications:</span> Detailed explanations of FSK use in insulation systems.
+                        </div>
+                      </div>
+                      <div className="feature-item">
+                        <div className="feature-bullet"></div>
+                        <div className="feature-content">
+                          <span className="feature-label">Technical Specifications:</span> Precise measurements and material properties.
+                        </div>
+                      </div>
+                      <div className="feature-item">
+                        <div className="feature-bullet"></div>
+                        <div className="feature-content">
+                          <span className="feature-label">Contact Integration:</span> Inquiry forms for potential clients.
+                        </div>
+                      </div>
+                      <div className="feature-item">
+                        <div className="feature-bullet"></div>
+                        <div className="feature-content">
+                          <span className="feature-label">SEO Optimization:</span> Industry-specific keywords and meta tags.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Outcome Section */}
+                  <div className="blog-section mb-16">
+                    <div className="section-header mb-8">
+                      <div className="flex items-center gap-4 mb-3">
+                        <div className="icon-wrapper">
+                          <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                          </svg>
+                        </div>
+                        <h3 className="section-title">Outcome</h3>
+                      </div>
+                      <div className="section-divider"></div>
+                    </div>
+
+                    <div className="outcome-content space-y-6">
+                      <p className="text-gray-700 leading-relaxed">
+                        The FSK Foil Products Website successfully established a professional online presence for FSK materials, providing comprehensive information about their role in the insulation industry.
+                      </p>
+
+                      <div className="results-card">
+                        <h5 className="results-title">Key Achievements:</h5>
+                        <div className="results-list">
+                          <div className="result-item">
+                            <div className="result-bullet"></div>
+                            <span>Established authoritative online presence for FSK products</span>
+                          </div>
+                          <div className="result-item">
+                            <div className="result-bullet"></div>
+                            <span>Educational content about insulation industry applications</span>
+                          </div>
+                          <div className="result-item">
+                            <div className="result-bullet"></div>
+                            <span>Professional presentation of technical specifications</span>
+                          </div>
+                          <div className="result-item">
+                            <div className="result-bullet"></div>
+                            <span>SEO-optimized for industrial search terms</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Summary Section */}
+                  <div className="summary-card">
+                    <div className="summary-header">
+                      <div className="flex items-center gap-3 mb-4">
+                        <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                        <h3 className="summary-title">In Summary</h3>
+                      </div>
+                    </div>
+                    <div className="summary-content">
+                      <div className="summary-item">
+                        <span className="summary-label">Built with:</span>
+                        <span className="summary-value">Next.js, Tailwind CSS, Node.js, Firebase, Cloudinary, Vercel</span>
+                      </div>
+                      <div className="summary-item">
+                        <span className="summary-label">Focus:</span>
+                        <span className="summary-value">Technical Education, Industry Information, Professional Presentation</span>
+                      </div>
+                    </div>
+                  </div>
+                </>
+              ) : projectId === 5 ? (
+                <>
+                  {/* Ridezo Content */}
+                  {/* Introduction */}
+                  <div className="blog-intro mb-12">
+                    <p className="text-xl leading-relaxed text-gray-700 font-medium">
+                      The Ridezo Transportation Platform was developed by Shudveta IT Solutions to create a comprehensive transportation booking system that makes daily commuting and travel planning stress-free. The platform serves both individual travelers and businesses with transparent pricing and professional service.
+                    </p>
+                  </div>
+
+                  {/* Tech Stack Section */}
+                  <div className="blog-section mb-16">
+                    <div className="section-header mb-8">
+                      <div className="flex items-center gap-4 mb-3">
+                        <div className="icon-wrapper">
+                          <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                          </svg>
+                        </div>
+                        <h3 className="section-title">Tech Stack Overview</h3>
+                      </div>
+                      <div className="section-divider"></div>
+                    </div>
+
+                    <div className="tech-stack-grid">
+                      <div className="tech-item">
+                        <div className="tech-label">Frontend:</div>
+                        <div className="tech-value">Next.js, Tailwind CSS, React</div>
+                      </div>
+                      <div className="tech-item">
+                        <div className="tech-label">Backend:</div>
+                        <div className="tech-value">Node.js, Express.js</div>
+                      </div>
+                      <div className="tech-item">
+                        <div className="tech-label">Database:</div>
+                        <div className="tech-value">Firebase Firestore</div>
+                      </div>
+                      <div className="tech-item">
+                        <div className="tech-label">Maps & Location:</div>
+                        <div className="tech-value">Google Maps API</div>
+                      </div>
+                      <div className="tech-item">
+                        <div className="tech-label">Payments:</div>
+                        <div className="tech-value">Stripe API</div>
+                      </div>
+                      <div className="tech-item">
+                        <div className="tech-label">Hosting:</div>
+                        <div className="tech-value">Vercel</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Development Approach Section */}
+                  <div className="blog-section mb-16">
+                    <div className="section-header mb-8">
+                      <div className="flex items-center gap-4 mb-3">
+                        <div className="icon-wrapper">
+                          <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                          </svg>
+                        </div>
+                        <h3 className="section-title">Development Approach</h3>
+                      </div>
+                      <div className="section-divider"></div>
+                    </div>
+
+                    <div className="approach-content space-y-6">
+                      <p className="text-gray-700 leading-relaxed">
+                        The platform was designed with a user-centric approach, focusing on simplicity and reliability. We built a comprehensive booking system that handles everything from office subscriptions to outstation travel, with real-time availability and transparent pricing.
+                      </p>
+                      <p className="text-gray-700 leading-relaxed">
+                        Integration with Google Maps API provides accurate routing and location services, while Firebase ensures real-time updates and reliable data synchronization across all user devices.
+                      </p>
+                      <p className="text-gray-700 leading-relaxed">
+                        The payment system was implemented with Stripe for secure transactions, supporting both subscription models and one-time payments. The admin dashboard allows Ridezo to manage bookings, drivers, and pricing in real-time.
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Core Features Section */}
+                  <div className="blog-section mb-16">
+                    <div className="section-header mb-8">
+                      <div className="flex items-center gap-4 mb-3">
+                        <div className="icon-wrapper">
+                          <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                          </svg>
+                        </div>
+                        <h3 className="section-title">Core Features Implemented</h3>
+                      </div>
+                      <div className="section-divider"></div>
+                    </div>
+
+                    <div className="features-list space-y-4">
+                      <div className="feature-item">
+                        <div className="feature-bullet"></div>
+                        <div className="feature-content">
+                          <span className="feature-label">Pre-booked Transportation:</span> Scheduled rides for daily commuting and planned travel.
+                        </div>
+                      </div>
+                      <div className="feature-item">
+                        <div className="feature-bullet"></div>
+                        <div className="feature-content">
+                          <span className="feature-label">Office Subscriptions:</span> Weekly and monthly plans for regular office commuters.
+                        </div>
+                      </div>
+                      <div className="feature-item">
+                        <div className="feature-bullet"></div>
+                        <div className="feature-content">
+                          <span className="feature-label">Transparent Pricing:</span> Clear per-km rates and subscription costs.
+                        </div>
+                      </div>
+                      <div className="feature-item">
+                        <div className="feature-bullet"></div>
+                        <div className="feature-content">
+                          <span className="feature-label">GPS Tracking:</span> Real-time location tracking and ETA updates.
+                        </div>
+                      </div>
+                      <div className="feature-item">
+                        <div className="feature-bullet"></div>
+                        <div className="feature-content">
+                          <span className="feature-label">Professional Drivers:</span> Verified and trained driver network.
+                        </div>
+                      </div>
+                      <div className="feature-item">
+                        <div className="feature-bullet"></div>
+                        <div className="feature-content">
+                          <span className="feature-label">Multi-route Support:</span> City rides, family trips, and outstation travel.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Outcome Section */}
+                  <div className="blog-section mb-16">
+                    <div className="section-header mb-8">
+                      <div className="flex items-center gap-4 mb-3">
+                        <div className="icon-wrapper">
+                          <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                          </svg>
+                        </div>
+                        <h3 className="section-title">Outcome</h3>
+                      </div>
+                      <div className="section-divider"></div>
+                    </div>
+
+                    <div className="outcome-content space-y-6">
+                      <p className="text-gray-700 leading-relaxed">
+                        The Ridezo Transportation Platform successfully established a comprehensive transportation booking system that serves both individual and business customers. The platform provides reliable, transparent, and convenient transportation solutions.
+                      </p>
+
+                      <div className="results-card">
+                        <h5 className="results-title">Key Achievements:</h5>
+                        <div className="results-list">
+                          <div className="result-item">
+                            <div className="result-bullet"></div>
+                            <span>Comprehensive booking system for multiple transportation needs</span>
+                          </div>
+                          <div className="result-item">
+                            <div className="result-bullet"></div>
+                            <span>Transparent pricing with subscription and pay-per-use options</span>
+                          </div>
+                          <div className="result-item">
+                            <div className="result-bullet"></div>
+                            <span>Real-time GPS tracking and communication features</span>
+                          </div>
+                          <div className="result-item">
+                            <div className="result-bullet"></div>
+                            <span>Professional driver network with safety protocols</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Summary Section */}
+                  <div className="summary-card">
+                    <div className="summary-header">
+                      <div className="flex items-center gap-3 mb-4">
+                        <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                        <h3 className="summary-title">In Summary</h3>
+                      </div>
+                    </div>
+                    <div className="summary-content">
+                      <div className="summary-item">
+                        <span className="summary-label">Built with:</span>
+                        <span className="summary-value">Next.js, Tailwind CSS, Node.js, Firebase, Google Maps API, Stripe</span>
+                      </div>
+                      <div className="summary-item">
+                        <span className="summary-label">Focus:</span>
+                        <span className="summary-value">Transportation Booking, Transparent Pricing, GPS Tracking, Professional Service</span>
                       </div>
                     </div>
                   </div>

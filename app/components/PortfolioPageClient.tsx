@@ -50,6 +50,32 @@ export default function PortfolioPageClient() {
     },
     {
       id: 4,
+      title: "FSK Foil Products Website",
+      category: "Industrial Solutions",
+      description: "Specialized website for Foil-Scrim-Kraft (FSK) products used in insulation industry, featuring comprehensive product information and industry applications.",
+      longDescription: "A specialized website focused on Foil-Scrim-Kraft (FSK) products, which are materials commonly used in the insulation industry. FSK is a laminated composite, usually made from an aluminum foil layer, fiberglass scrim for reinforcement, and a layer of natural kraft paper. Its primary role is to act as a durable, fire-resistant facing for insulation blankets and duct wraps. Essentially, it helps cover the insulation and serves as an excellent vapor retarder to improve energy efficiency.",
+      image: "🏭",
+      gradient: "from-gray-500 to-slate-600",
+      buttonGradient: "from-gray-600 to-slate-600",
+      tags: ["Industrial", "Manufacturing", "Insulation", "FSK", "Energy Efficiency"],
+      status: "Completed",
+      year: "2024"
+    },
+    {
+      id: 5,
+      title: "Ridezo Transportation Platform",
+      category: "Transportation Solutions",
+      description: "Comprehensive transportation platform offering pre-booked, reliable rides for daily commuting, office travel, city rides, family trips, and outstation travel with transparent pricing.",
+      longDescription: "Goridezo.com is a website for Ridezo, which is a service offering pre-booked, reliable transportation. They focus on making daily commuting stress-free, especially for office goers, but also cover city rides, family trips, and outstation travel. They offer transparent pricing with options like weekly/monthly office subscriptions or per-km city ride fares. Basically, it's a ride service for both planned and on-demand travel with professional drivers.",
+      image: "🚗",
+      gradient: "from-blue-500 to-cyan-600",
+      buttonGradient: "from-blue-600 to-cyan-600",
+      tags: ["Transportation", "Ride Service", "Subscription", "Mobile App", "GPS Tracking"],
+      status: "Completed",
+      year: "2024"
+    },
+    {
+      id: 6,
       title: "IoT Smart Home Hub",
       category: "IoT Solutions",
       description: "Intelligent home automation system with voice control and energy optimization features.",
@@ -62,7 +88,7 @@ export default function PortfolioPageClient() {
       year: "2024"
     },
     {
-      id: 5,
+      id: 7,
       title: "E-Learning Platform",
       category: "EdTech Innovation",
       description: "Interactive online learning platform with AI-powered personalized curriculum recommendations.",
@@ -75,7 +101,7 @@ export default function PortfolioPageClient() {
       year: "2023"
     },
     {
-      id: 6,
+      id: 8,
       title: "Financial Analytics Dashboard",
       category: "FinTech Solutions",
       description: "Real-time financial data visualization and analysis platform for investment decisions.",
@@ -88,7 +114,7 @@ export default function PortfolioPageClient() {
       year: "2023"
     },
     {
-      id: 7,
+      id: 9,
       title: "AR Shopping Experience",
       category: "AR/VR Innovation",
       description: "Augmented reality shopping application with virtual try-on and product visualization.",
@@ -101,7 +127,7 @@ export default function PortfolioPageClient() {
       year: "2024"
     },
     {
-      id: 8,
+      id: 10,
       title: "Healthcare Management System",
       category: "HealthTech Solutions",
       description: "Comprehensive healthcare management platform with patient monitoring and telemedicine features.",
@@ -114,7 +140,7 @@ export default function PortfolioPageClient() {
       year: "2023"
     },
     {
-      id: 9,
+      id: 11,
       title: "Supply Chain Optimizer",
       category: "Logistics Solutions",
       description: "AI-powered supply chain optimization platform reducing costs by 25% and improving delivery times.",
@@ -139,7 +165,7 @@ export default function PortfolioPageClient() {
       "mainEntity": {
         "@type": "ItemList",
         "name": "Shudveta Projects",
-        "numberOfItems": projects.length,
+        "numberOfItems": 5,
         "itemListElement": projects.map((project, index) => ({
           "@type": "ListItem",
           "position": index + 1,
@@ -449,6 +475,56 @@ export default function PortfolioPageClient() {
                 <Link href="/portfolio/3" className="w-full portfolio-button mt-auto inline-block text-center text-sm sm:text-base">
                   Read More
                 </Link>
+              </div>
+            </div>
+
+            {/* Project 4 - FSK Foil Products Website */}
+            <div className="portfolio-card group">
+              <div className="h-48 sm:h-56 relative overflow-hidden flex-shrink-0 w-full">
+                <Image
+                  src="/fskfoil.png"
+                  alt="FSK Foil Products Website - Specialized website for Foil-Scrim-Kraft products used in insulation industry built by Shudveta IT Solutions"
+                  width={600}
+                  height={400}
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  unoptimized={true}
+                />
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
+              </div>
+              <div className="portfolio-card-content">
+                <div className="portfolio-card-text">
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">FSK Foil Products Website</h3>
+                  <p className="text-sm sm:text-base text-gray-600 mb-4">That website is focused on Foil-Scrim-Kraft (FSK) products, which are materials commonly used in the insulation industry.</p>
+                </div>
+                <a href="https://fsk-foil.pages.dev" target="_blank" rel="noopener noreferrer" className="w-full portfolio-button mt-auto inline-block text-center text-sm sm:text-base">
+                  View Website
+                </a>
+              </div>
+            </div>
+
+            {/* Project 5 - Ridezo Transportation Platform */}
+            <div className="portfolio-card group">
+              <div className="h-48 sm:h-56 relative overflow-hidden flex-shrink-0 w-full">
+                <Image
+                  src="/ridezo.png"
+                  alt="Ridezo Transportation Platform - Pre-booked reliable transportation service for daily commuting, office travel, and outstation trips built by Shudveta IT Solutions"
+                  width={600}
+                  height={400}
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  unoptimized={true}
+                />
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
+              </div>
+              <div className="portfolio-card-content">
+                <div className="portfolio-card-text">
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">Ridezo Transportation Platform</h3>
+                  <p className="text-sm sm:text-base text-gray-600 mb-4">Goridezo.com is a website for Ridezo, offering pre-booked, reliable transportation for daily commuting and travel needs.</p>
+                </div>
+                <a href="https://goridezo.com" target="_blank" rel="noopener noreferrer" className="w-full portfolio-button mt-auto inline-block text-center text-sm sm:text-base">
+                  View Website
+                </a>
               </div>
             </div>
           </div>
