@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     description: "ZyncedAI uses multiple AI agents with defined roles to analyze user queries through structured debate and discussion, providing clearer insights than traditional AI chatbots.",
     images: [
       {
-        url: '/introducingzynced.png',
+        url: '/zync.mp4',
         width: 1200,
         height: 630,
         alt: 'ZyncedAI - Multi-Agent Debate-Driven AI Platform for Structured Reasoning',
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Introducing ZyncedAI: Multi-Agent Debate-Driven AI for Real Thinking',
     description: 'ZyncedAI uses structured debate between AI agents to provide clearer, more reasoned insights than traditional AI chatbots.',
-    images: ['/introducingzynced.png'],
+    images: ['/zync.mp4'],
   },
   alternates: {
     canonical: 'https://shudveta.com/blogs/introducing-zynced',

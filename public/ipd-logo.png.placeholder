@@ -1,0 +1,6 @@
+# This is a placeholder file. 
+# To use a proper logo for IPD Now, you need to:
+# 1. Convert your 3D GLB model to a 2D image (PNG/JPG)
+# 2. Or create a custom 2D logo design
+# 3. Save it as public/ipd-logo.png
+# 4. Update the blog component to use /ipd-logo.png instead of /logo.png

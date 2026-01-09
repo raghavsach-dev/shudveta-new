@@ -497,9 +497,9 @@ export default function PortfolioPageClient() {
                   <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">FSK Foil Products Website</h3>
                   <p className="text-sm sm:text-base text-gray-600 mb-4">That website is focused on Foil-Scrim-Kraft (FSK) products, which are materials commonly used in the insulation industry.</p>
                 </div>
-                <a href="https://fsk-foil.pages.dev" target="_blank" rel="noopener noreferrer" className="w-full portfolio-button mt-auto inline-block text-center text-sm sm:text-base">
-                  View Website
-                </a>
+                <Link href="/portfolio/4" className="w-full portfolio-button mt-auto inline-block text-center text-sm sm:text-base">
+                  Read More
+                </Link>
               </div>
             </div>
 
@@ -522,9 +522,9 @@ export default function PortfolioPageClient() {
                   <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">Ridezo Transportation Platform</h3>
                   <p className="text-sm sm:text-base text-gray-600 mb-4">Goridezo.com is a website for Ridezo, offering pre-booked, reliable transportation for daily commuting and travel needs.</p>
                 </div>
-                <a href="https://goridezo.com" target="_blank" rel="noopener noreferrer" className="w-full portfolio-button mt-auto inline-block text-center text-sm sm:text-base">
-                  View Website
-                </a>
+                <Link href="/portfolio/5" className="w-full portfolio-button mt-auto inline-block text-center text-sm sm:text-base">
+                  Read More
+                </Link>
               </div>
             </div>
           </div>

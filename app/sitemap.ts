@@ -56,6 +56,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Blog pages
   const blogPages = [
     {
+      url: `${baseUrl}/blogs/introducing-ipd-now`,
+      lastModified: new Date('2024-12-21'),
+      changeFrequency: 'monthly' as const,
+      priority: 0.6,
+    },
+    {
       url: `${baseUrl}/blogs/introducing-zynced`,
       lastModified: new Date('2024-12-21'),
       changeFrequency: 'monthly' as const,

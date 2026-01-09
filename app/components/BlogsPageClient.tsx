@@ -11,6 +11,17 @@ export default function BlogsPageClient() {
 
   const blogs = [
     {
+      id: 'introducing-ipd-now',
+      title: "Conceptualising IPD Now: An AI-Native, Identity-Driven Healthcare Concept Built for Continuity",
+      category: "Healthcare Technology",
+      excerpt: "Discover IPD Now, an AI-native healthcare platform concept built around identity, continuous health signals, and agentic AI intelligence. A revolutionary approach to connected healthcare continuity.",
+      image: "/ipdnowlogo.png",
+      author: "Shudveta Team",
+      date: "Dec 2024",
+      readTime: "8 min read",
+      tags: ["Healthcare", "AI", "ABHA", "Identity", "Digital Health"]
+    },
+    {
       id: 'introducing-zynced',
       title: "Introducing ZyncedAI: A Multi-Agent, Debate-Driven AI Built for Real Thinking",
       category: "Artificial Intelligence",
@@ -290,40 +301,61 @@ export default function BlogsPageClient() {
 
           {/* Blogs Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12">
-            {/* Blog Post */}
-            <div className="portfolio-card group">
-              <div className="h-48 sm:h-56 relative overflow-hidden flex-shrink-0 w-full">
-                <Image
-                  src="/introducingzynced.png"
-                  alt="ZyncedAI - Multi-Agent Debate-Driven AI Platform - Innovative AI technology for structured reasoning and debate-based analysis"
-                  fill
-                  className="object-cover"
-                  unoptimized={true}
-                />
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
-              </div>
-              <div className="portfolio-card-content">
-                <div className="portfolio-card-text">
-                  <div className="flex items-center gap-2 mb-2">
-                    <span className="inline-flex items-center justify-center flex-1 px-2 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded-full border border-blue-200/60">
-                      Artificial Intelligence
-                    </span>
-                  </div>
-                  <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">Introducing ZyncedAI: A Multi-Agent, Debate-Driven AI Built for Real Thinking</h3>
-                  <p className="text-sm sm:text-base text-gray-600 mb-3">ZyncedAI is a reasoning-first AI platform that uses multiple AI agents with defined roles to analyze user queries through structured debate and discussion.</p>
-                  <div className="flex items-center gap-4 text-xs text-gray-500 mb-4">
-                    <span>Shudveta Team</span>
-                    <span>•</span>
-                    <span>Dec 2024</span>
-                    <span>•</span>
-                    <span>12 min read</span>
-                  </div>
+            {blogs.map((blog) => (
+              <div key={blog.id} className="portfolio-card group">
+                <div className={`h-48 sm:h-56 relative overflow-hidden flex-shrink-0 w-full ${blog.id === 'introducing-ipd-now' ? 'bg-white' : 'bg-slate-900'}`}>
+                  {blog.id === 'introducing-ipd-now' ? (
+                    <div className="absolute inset-0 flex items-center justify-center p-8">
+                      <div className="relative w-full h-full">
+                        <Image
+                          src={blog.image}
+                          alt={blog.title}
+                          fill
+                          className="object-contain"
+                          unoptimized={true}
+                        />
+                      </div>
+                    </div>
+                  ) : (
+                    <>
+                      <Image
+                        src={blog.image}
+                        alt={`${blog.title} - ${blog.excerpt}`}
+                        fill
+                        className="object-cover"
+                        unoptimized={true}
+                      />
+                      <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
+                    </>
+                  )}
                 </div>
-                <Link href="/blogs/introducing-zynced" className="w-full portfolio-button mt-auto inline-block text-center text-sm sm:text-base">
-                  Read More
-                </Link>
+                <div className="portfolio-card-content">
+                  <div className="portfolio-card-text">
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="inline-flex items-center justify-center flex-1 px-2 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded-full border border-blue-200/60">
+                        {blog.category}
+                      </span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 truncate-2-lines" title={blog.title}>
+                      {blog.title}
+                    </h3>
+                    <p className="text-sm sm:text-base text-gray-600 mb-3 line-clamp-3">
+                      {blog.excerpt}
+                    </p>
+                    <div className="flex items-center gap-4 text-xs text-gray-500 mb-4">
+                      <span>{blog.author}</span>
+                      <span>•</span>
+                      <span>{blog.date}</span>
+                      <span>•</span>
+                      <span>{blog.readTime}</span>
+                    </div>
+                  </div>
+                  <Link href={`/blogs/${blog.id}`} className="w-full portfolio-button mt-auto inline-block text-center text-sm sm:text-base">
+                    Read More
+                  </Link>
+                </div>
               </div>
-            </div>
+            ))}
           </div>
 
         </div>
