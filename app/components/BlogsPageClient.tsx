@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
+import IPD3DLogo from "./IPD3DLogo";
 import "../portfolio/portfolio.css";
 
 export default function BlogsPageClient() {
@@ -15,7 +16,7 @@ export default function BlogsPageClient() {
       title: "Conceptualising IPD Now: An AI-Native, Identity-Driven Healthcare Concept Built for Continuity",
       category: "Healthcare Technology",
       excerpt: "Discover IPD Now, an AI-native healthcare platform concept built around identity, continuous health signals, and agentic AI intelligence. A revolutionary approach to connected healthcare continuity.",
-      image: "/ipdnowlogo.png",
+      image: "/3d_ipdnow.glb",
       author: "Shudveta Team",
       date: "Dec 2024",
       readTime: "8 min read",
@@ -305,16 +306,8 @@ export default function BlogsPageClient() {
               <div key={blog.id} className="portfolio-card group">
                 <div className={`h-48 sm:h-56 relative overflow-hidden flex-shrink-0 w-full ${blog.id === 'introducing-ipd-now' ? 'bg-white' : 'bg-slate-900'}`}>
                   {blog.id === 'introducing-ipd-now' ? (
-                    <div className="absolute inset-0 flex items-center justify-center p-8">
-                      <div className="relative w-full h-full">
-                        <Image
-                          src={blog.image}
-                          alt={blog.title}
-                          fill
-                          className="object-contain"
-                          unoptimized={true}
-                        />
-                      </div>
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <IPD3DLogo width={400} height={400} className="w-full h-full" />
                     </div>
                   ) : (
                     <>

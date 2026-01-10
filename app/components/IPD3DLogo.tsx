@@ -20,11 +20,15 @@ export default function IPD3DLogo({ width = 200, height = 200, className = '' }:
   const animationFrameRef = useRef<number | null>(null);
 
   useEffect(() => {
+    let isMounted = true;
     if (!mountRef.current) return;
+
+    // Clear any existing content
+    mountRef.current.innerHTML = '';
 
     // Scene setup
     const scene = new THREE.Scene();
-    scene.background = new THREE.Color(0x000000); // Transparent background
+    // scene.background = new THREE.Color(0x000000); // Remove this to allow transparency from clearColor
     sceneRef.current = scene;
 
     // Camera setup
@@ -33,11 +37,17 @@ export default function IPD3DLogo({ width = 200, height = 200, className = '' }:
     cameraRef.current = camera;
 
     // Renderer setup
-    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    const renderer = new THREE.WebGLRenderer({
+      antialias: true,
+      alpha: true,
+      powerPreference: "high-performance"
+    });
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2)); // Handle high-DPI screens
     renderer.setSize(width, height);
     renderer.setClearColor(0x000000, 0); // Transparent background
     renderer.shadowMap.enabled = true;
     renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+    renderer.outputColorSpace = THREE.SRGBColorSpace; // Better color accuracy
     rendererRef.current = renderer;
 
     // Controls
@@ -51,18 +61,17 @@ export default function IPD3DLogo({ width = 200, height = 200, className = '' }:
     controlsRef.current = controls;
 
     // Lighting
-    const ambientLight = new THREE.AmbientLight(0x404040, 0.8);
+    const ambientLight = new THREE.AmbientLight(0xffffff, 1.2); // Brighter ambient
     scene.add(ambientLight);
 
-    const directionalLight = new THREE.DirectionalLight(0xffffff, 1.5);
-    directionalLight.position.set(5, 5, 5);
-    directionalLight.castShadow = true;
-    scene.add(directionalLight);
+    const mainLight = new THREE.DirectionalLight(0xffffff, 2.8); // Strong main light
+    mainLight.position.set(5, 10, 7.5);
+    mainLight.castShadow = true;
+    scene.add(mainLight);
 
-    // Point light
-    const pointLight = new THREE.PointLight(0x64b5f6, 1);
-    pointLight.position.set(-5, 5, 5);
-    scene.add(pointLight);
+    const fillLight = new THREE.DirectionalLight(0x64b5f6, 1.8); // Blue-ish fill light
+    fillLight.position.set(-5, 5, 5);
+    scene.add(fillLight);
 
     // Load GLTF model
     const loader = new GLTFLoader();
@@ -79,7 +88,7 @@ export default function IPD3DLogo({ width = 200, height = 200, className = '' }:
         // Scale model appropriately for logo
         const size = box.getSize(new THREE.Vector3());
         const maxDim = Math.max(size.x, size.y, size.z);
-        const scale = 2 / maxDim;
+        const scale = 3.2 / maxDim; // Further increased scale for more presence
         model.scale.setScalar(scale);
 
         // Enable shadows
@@ -90,6 +99,7 @@ export default function IPD3DLogo({ width = 200, height = 200, className = '' }:
           }
         });
 
+        if (!isMounted) return;
         scene.add(model);
       },
       (progress) => {
@@ -114,11 +124,11 @@ export default function IPD3DLogo({ width = 200, height = 200, className = '' }:
     // Animation loop
     const animate = () => {
       animationFrameRef.current = requestAnimationFrame(animate);
-      
+
       if (controlsRef.current) {
         controlsRef.current.update();
       }
-      
+
       if (rendererRef.current && cameraRef.current && sceneRef.current) {
         rendererRef.current.render(sceneRef.current, cameraRef.current);
       }
@@ -138,26 +148,43 @@ export default function IPD3DLogo({ width = 200, height = 200, className = '' }:
 
     // Cleanup
     return () => {
+      isMounted = false;
       window.removeEventListener('resize', handleResize);
-      
+
       if (animationFrameRef.current) {
         cancelAnimationFrame(animationFrameRef.current);
       }
-      
+
       if (controlsRef.current) {
         controlsRef.current.dispose();
       }
-      
-      if (rendererRef.current && mountRef.current) {
-        mountRef.current.removeChild(rendererRef.current.domElement);
+
+      if (rendererRef.current) {
         rendererRef.current.dispose();
+        if (mountRef.current && rendererRef.current.domElement.parentElement === mountRef.current) {
+          mountRef.current.removeChild(rendererRef.current.domElement);
+        }
+      }
+
+      // Clear scene
+      if (sceneRef.current) {
+        sceneRef.current.traverse((object) => {
+          if (object instanceof THREE.Mesh) {
+            object.geometry.dispose();
+            if (Array.isArray(object.material)) {
+              object.material.forEach(material => material.dispose());
+            } else {
+              object.material.dispose();
+            }
+          }
+        });
       }
     };
   }, [width, height]);
 
   return (
-    <div 
-      ref={mountRef} 
+    <div
+      ref={mountRef}
       className={`inline-block ${className}`}
       style={{ width, height }}
       title="IPD Now - Interactive 3D Logo"

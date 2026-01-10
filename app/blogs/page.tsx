@@ -20,7 +20,10 @@ export const metadata: Metadata = {
     "software development articles",
     "innovation blog",
     "technology trends",
-    "AI development insights"
+    "AI development insights",
+    "IPD Now",
+    "Healio AI",
+    "healthcare innovation India"
   ],
   openGraph: {
     title: "Blog | AI, Technology & Innovation Insights | Shudveta IT Solutions",

@@ -15,8 +15,8 @@ export default function IPDNowBlogClient() {
       "@context": "https://schema.org",
       "@type": "BlogPosting",
       "headline": "Conceptualising IPD Now: An AI-Native, Identity-Driven Healthcare Concept Built for Continuity",
-      "description": "Discover IPD Now, an AI-native healthcare platform concept built around identity, continuous health signals, and agentic AI intelligence. A revolutionary approach to connected healthcare continuity.",
-      "image": "https://shudveta.com/logo.png",
+      "description": "Discover IPD Now and Healio, an AI-native healthcare platform concept built around identity, continuous health signals, and multimodal agentic AI intelligence.",
+      "image": "https://shudveta.com/ipdnowlogo.png",
       "datePublished": "2024-12-21T00:00:00+00:00",
       "dateModified": "2024-12-21T00:00:00+00:00",
       "author": {
@@ -37,7 +37,7 @@ export default function IPDNowBlogClient() {
         "@id": "https://shudveta.com/blogs/introducing-ipd-now"
       },
       "articleSection": "Healthcare Technology",
-      "keywords": ["Healthcare", "AI", "ABHA", "Identity", "Digital Health", "IPD Now"],
+      "keywords": ["Healthcare", "AI", "Healio", "multimodal AI", "ABHA", "Identity", "Digital Health", "IPD Now"],
       "url": "https://shudveta.com/blogs/introducing-ipd-now",
       "timeRequired": "PT8M",
       "wordCount": 800,
