@@ -76,16 +76,16 @@ export default function PortfolioPageClient() {
     },
     {
       id: 6,
-      title: "IoT Smart Home Hub",
-      category: "IoT Solutions",
-      description: "Intelligent home automation system with voice control and energy optimization features.",
-      longDescription: "An advanced IoT platform that connects and manages all smart home devices through a centralized hub. Features include voice-activated controls, energy consumption monitoring, and predictive maintenance alerts.",
-      image: "🏠",
-      gradient: "from-orange-500 to-red-600",
-      buttonGradient: "from-orange-600 to-red-600",
-      tags: ["IoT", "Smart Home", "Voice Control", "Energy", "MQTT"],
-      status: "In Development",
-      year: "2024"
+      title: "Forkup - Italian Pasta Website",
+      category: "Restaurant E-commerce",
+      description: "A modern, neon-themed Italian pasta restaurant website featuring authentic cuisine ordering and elegant user experience.",
+      longDescription: "Forkup is a premier Italian pasta destination requiring a digital presence that matched their sophisticated branding. We built a sleek, mobile-first website that showcases their menu and enables seamless online ordering.",
+      image: "🍝",
+      gradient: "from-stone-900 to-amber-900",
+      buttonGradient: "from-red-600 to-pink-600",
+      tags: ["Next.js", "Tailwind CSS v4", "E-commerce", "Responsive"],
+      status: "Live",
+      year: "2025"
     },
     {
       id: 7,
@@ -523,6 +523,31 @@ export default function PortfolioPageClient() {
                   <p className="text-sm sm:text-base text-gray-600 mb-4">Goridezo.com is a website for Ridezo, offering pre-booked, reliable transportation for daily commuting and travel needs.</p>
                 </div>
                 <Link href="/portfolio/5" className="w-full portfolio-button mt-auto inline-block text-center text-sm sm:text-base">
+                  Read More
+                </Link>
+              </div>
+            </div>
+
+            {/* Project 6 - Forkup Italian Pasta Website */}
+            <div className="portfolio-card group">
+              <div className="h-48 sm:h-56 relative overflow-hidden flex-shrink-0 w-full">
+                <Image
+                  src="/forkup.png"
+                  alt="Forkup Italian Pasta Website - Modern neon-themed restaurant website and ordering platform built with Next.js and Tailwind CSS"
+                  width={600}
+                  height={400}
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  unoptimized={true}
+                />
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
+              </div>
+              <div className="portfolio-card-content">
+                <div className="portfolio-card-text">
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">Forkup - Pasta Restaurant</h3>
+                  <p className="text-sm sm:text-base text-gray-600 mb-4">A modern, neon-themed Italian pasta restaurant website featuring authentic cuisine ordering and elegant user experience.</p>
+                </div>
+                <Link href="/portfolio/6" className="w-full portfolio-button mt-auto inline-block text-center text-sm sm:text-base">
                   Read More
                 </Link>
               </div>

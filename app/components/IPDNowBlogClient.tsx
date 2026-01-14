@@ -245,7 +245,7 @@ export default function IPDNowBlogClient() {
           <article className="prose prose-lg max-w-none">
             {/* Introduction */}
             <p className="text-gray-700 leading-relaxed mb-6">
-              IPD Now rethinks healthcare not as a series of hospital events, but as a continuous, intelligent health journey built around identity, data, and AI—where interaction, understanding, and guidance happen in real time.
+              IPD Now rethinks healthcare not as a series of hospital events, but as a continuous, intelligent health journey built around identity, data, and AI&mdash;where interaction, understanding, and guidance happen in real time.
             </p>
 
             {/* Section: What is IPD Now */}
@@ -261,10 +261,10 @@ export default function IPDNowBlogClient() {
                 <li>Wards or physical infrastructure</li>
               </ul>
               <p className="text-gray-700 leading-relaxed">
-                Instead, IPD Now is designed as a digital healthcare continuity layer that connects identity, diagnostics, fitness data, and AI-driven insights into a single evolving health view—accessible through a conversational AI interface.
+                Instead, IPD Now is designed as a digital healthcare continuity layer that connects identity, diagnostics, fitness data, and AI-driven insights into a single evolving health view&mdash;accessible through a conversational AI interface.
               </p>
               <blockquote className="border-l-4 border-blue-500 pl-6 py-2 my-8 italic text-blue-900 bg-blue-50">
-                <p>“IPD Now is designed to understand health continuously, not episodically.”</p>
+                <p>&ldquo;IPD Now is designed to understand health continuously, not episodically.&rdquo;</p>
               </blockquote>
             </div>
 
@@ -407,7 +407,7 @@ export default function IPDNowBlogClient() {
                 IPD Now aims to help healthcare systems think more clearly, act earlier, and support better outcomes.
               </p>
               <blockquote className="bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200 rounded-lg p-6 my-8 italic text-blue-900 text-center">
-                <p>“IPD Now does not aim to manage hospitals.<br />It aims to understand health.”</p>
+                <p>&ldquo;IPD Now does not aim to manage hospitals.<br />It aims to understand health.&rdquo;</p>
               </blockquote>
             </div>
 
@@ -444,11 +444,11 @@ export default function IPDNowBlogClient() {
             <div>
               <h4 className="text-sm font-semibold mb-3 text-gray-200">Quick Links</h4>
               <ul className="space-y-2">
-                <li><a href="/" className="text-gray-400 hover:text-white text-xs sm:text-sm transition-colors duration-300">Home</a></li>
-                <li><a href="/portfolio" className="text-gray-400 hover:text-white text-xs sm:text-sm transition-colors duration-300">Portfolio</a></li>
-                <li><a href="/about" className="text-gray-400 hover:text-white text-xs sm:text-sm transition-colors duration-300">About Us</a></li>
-                <li><a href="/blogs" className="text-gray-400 hover:text-white text-xs sm:text-sm transition-colors duration-300">Blogs</a></li>
-                <li><a href="/contact" className="text-gray-400 hover:text-white text-xs sm:text-sm transition-colors duration-300">Contact</a></li>
+                <li><Link href="/" className="text-gray-400 hover:text-white text-xs sm:text-sm transition-colors duration-300">Home</Link></li>
+                <li><Link href="/portfolio" className="text-gray-400 hover:text-white text-xs sm:text-sm transition-colors duration-300">Portfolio</Link></li>
+                <li><Link href="/about" className="text-gray-400 hover:text-white text-xs sm:text-sm transition-colors duration-300">About Us</Link></li>
+                <li><Link href="/blogs" className="text-gray-400 hover:text-white text-xs sm:text-sm transition-colors duration-300">Blogs</Link></li>
+                <li><Link href="/contact" className="text-gray-400 hover:text-white text-xs sm:text-sm transition-colors duration-300">Contact</Link></li>
               </ul>
             </div>
 

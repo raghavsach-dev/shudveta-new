@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 
 export default function Projects() {
@@ -175,12 +175,11 @@ export default function Projects() {
                     <div className="text-5xl mb-2">{project.image}</div>
                     <div className="font-semibold">{project.category}</div>
                   </div>
-                  <div className={`absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-medium ${
-                    project.status === 'Live' ? 'bg-green-500 text-white' :
-                    project.status === 'Completed' ? 'bg-blue-500 text-white' :
-                    project.status === 'Beta' ? 'bg-orange-500 text-white' :
-                    'bg-gray-500 text-white'
-                  }`}>
+                  <div className={`absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-medium ${project.status === 'Live' ? 'bg-green-500 text-white' :
+                      project.status === 'Completed' ? 'bg-blue-500 text-white' :
+                        project.status === 'Beta' ? 'bg-orange-500 text-white' :
+                          'bg-gray-500 text-white'
+                    }`}>
                     {project.status}
                   </div>
                 </div>
@@ -240,9 +239,9 @@ export default function Projects() {
 
           {/* Back to Home */}
           <div className="text-center mt-12">
-            <a href="/" className="inline-block bg-gray-900 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors duration-300">
+            <Link href="/" className="inline-block bg-gray-900 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors duration-300">
               ← Back to Home
-            </a>
+            </Link>
           </div>
         </div>
       </section>

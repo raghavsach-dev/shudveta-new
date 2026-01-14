@@ -277,7 +277,7 @@ export default function ZyncedBlogClient() {
 
             <blockquote className="border-l-4 border-gray-400 pl-6 py-2 my-8 italic text-gray-900">
               <p>
-                "ZyncedAI is designed to think <em>with</em> the user, not <em>for</em> the user."
+                &quot;ZyncedAI is designed to think <em>with</em> the user, not <em>for</em> the user.&quot;
               </p>
             </blockquote>
 
@@ -298,7 +298,7 @@ export default function ZyncedBlogClient() {
             </div>
 
             <p className="text-gray-700 leading-relaxed mb-6">
-              These agents do not operate in isolation. They challenge and refine each other's outputs before a response reaches the user.
+              These agents do not operate in isolation. They challenge and refine each other&apos;s outputs before a response reaches the user.
             </p>
 
             <p className="text-gray-700 font-medium italic my-6">
@@ -307,7 +307,7 @@ export default function ZyncedBlogClient() {
 
             {/* Section: Reasoning Modes */}
             <h2 className="text-2xl font-bold text-gray-900 mb-6 mt-16">
-              Understanding ZyncedAI's Reasoning Modes
+              Understanding ZyncedAI&apos;s Reasoning Modes
             </h2>
 
             <p className="text-gray-700 leading-relaxed mb-8">
@@ -427,7 +427,7 @@ export default function ZyncedBlogClient() {
             </p>
 
             <blockquote className="border-l-4 border-gray-300 pl-4 py-2 my-6 italic text-gray-700">
-              <p>"The goal is clarity without surveillance."</p>
+              <p>&quot;The goal is clarity without surveillance.&quot;</p>
             </blockquote>
 
             {/* Section: Additional Features */}
@@ -437,7 +437,7 @@ export default function ZyncedBlogClient() {
 
             <h3 className="text-xl font-bold text-gray-900 mb-3">Temporary Chat Mode</h3>
             <p className="text-gray-700 leading-relaxed mb-6">
-              For users who don't want conversations to persist. No long-term memory is stored, and context is discarded after each session.
+              For users who don&apos;t want conversations to persist. No long-term memory is stored, and context is discarded after each session.
             </p>
 
             <h3 className="text-xl font-bold text-gray-900 mb-3">Image Generation Support</h3>
@@ -456,7 +456,7 @@ export default function ZyncedBlogClient() {
             </p>
 
             <blockquote className="border-l-4 border-gray-300 pl-4 py-2 my-6 italic text-gray-700">
-              <p>"The purpose is intellectual honesty, not shock value."</p>
+              <p>&quot;The purpose is intellectual honesty, not shock value.&quot;</p>
             </blockquote>
 
             {/* Section: Target Audience */}
@@ -526,8 +526,8 @@ export default function ZyncedBlogClient() {
 
             <blockquote className="border-l-4 border-gray-300 pl-4 py-2 my-6 italic text-gray-700">
               <p>
-                "ZyncedAI does not aim to sound confident.<br />
-                It aims to earn confidence through debate."
+                &quot;ZyncedAI does not aim to sound confident.<br />
+                It aims to earn confidence through debate.&quot;
               </p>
             </blockquote>
           </article>
@@ -551,11 +551,11 @@ export default function ZyncedBlogClient() {
             <div>
               <h4 className="text-sm font-semibold mb-3 text-gray-200">Quick Links</h4>
               <ul className="space-y-2">
-                <li><a href="/" className="text-gray-400 hover:text-white text-xs sm:text-sm transition-colors duration-300">Home</a></li>
-                <li><a href="/portfolio" className="text-gray-400 hover:text-white text-xs sm:text-sm transition-colors duration-300">Portfolio</a></li>
-                <li><a href="/about" className="text-gray-400 hover:text-white text-xs sm:text-sm transition-colors duration-300">About Us</a></li>
-                <li><a href="/blogs" className="text-gray-400 hover:text-white text-xs sm:text-sm transition-colors duration-300">Blogs</a></li>
-                <li><a href="/contact" className="text-gray-400 hover:text-white text-xs sm:text-sm transition-colors duration-300">Contact</a></li>
+                <li><Link href="/" className="text-gray-400 hover:text-white text-xs sm:text-sm transition-colors duration-300">Home</Link></li>
+                <li><Link href="/portfolio" className="text-gray-400 hover:text-white text-xs sm:text-sm transition-colors duration-300">Portfolio</Link></li>
+                <li><Link href="/about" className="text-gray-400 hover:text-white text-xs sm:text-sm transition-colors duration-300">About Us</Link></li>
+                <li><Link href="/blogs" className="text-gray-400 hover:text-white text-xs sm:text-sm transition-colors duration-300">Blogs</Link></li>
+                <li><Link href="/contact" className="text-gray-400 hover:text-white text-xs sm:text-sm transition-colors duration-300">Contact</Link></li>
               </ul>
             </div>
 

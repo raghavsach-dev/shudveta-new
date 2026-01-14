@@ -103,6 +103,26 @@ const PROJECTS = [
     ],
     technologies: ["Next.js", "Tailwind CSS", "Node.js", "Firebase", "Google Maps API", "Stripe"],
     year: "2024"
+  },
+  {
+    id: 6,
+    title: "Forkup - Italian Pasta Website",
+    category: "Restaurant E-commerce",
+    description:
+      "A modern, neon-themed Italian pasta restaurant website featuring authentic cuisine ordering and elegant user experience.",
+    longDescription:
+      "Forkup is North Delhi's premier Italian pasta destination requiring a digital presence that matched their sophisticated branding and culinary excellence. We built a sleek, mobile-first website that showcases their menu, enables seamless online ordering, and captures the vibrant energy of their authentic Italian experience. The project serves as both a marketing platform and online ordering system for 'Four Cup Pasta'.",
+    image: "/forkup.png",
+    features: [
+      "Hero video section with neon branding",
+      "Interactive dynamic menu system",
+      "Comprehensive ordering flow",
+      "Real-time form validation",
+      "Post-order feedback system",
+      "Mobile-first responsive design"
+    ],
+    technologies: ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS v4", "Turbopack"],
+    year: "2025"
   }
 ];
 
@@ -126,12 +146,12 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-800 mb-4">Invalid Project ID</h1>
           <p className="text-gray-600 mb-8">The project ID is not valid.</p>
-          <a
+          <Link
             href="/portfolio"
             className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
           >
             Back to Portfolio
-          </a>
+          </Link>
         </div>
       </div>
     );
@@ -144,13 +164,13 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-800 mb-4">Project Not Found</h1>
-          <p className="text-gray-600 mb-8">The project you're looking for doesn't exist.</p>
-          <a
+          <p className="text-gray-600 mb-8">The project you&apos;re looking for doesn&apos;t exist.</p>
+          <Link
             href="/portfolio"
             className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
           >
             Back to Portfolio
-          </a>
+          </Link>
         </div>
       </div>
     );
@@ -192,14 +212,16 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   project.id === 1
                     ? "https://lubeckelevators.com"
                     : project.id === 2
-                    ? "https://lubeckexports.com"
-                    : project.id === 3
-                    ? "https://smartethnics.com"
-                    : project.id === 4
-                    ? "https://fsk-foil.pages.dev"
-                    : project.id === 5
-                    ? "https://goridezo.com"
-                    : "#"
+                      ? "https://lubeckexports.com"
+                      : project.id === 3
+                        ? "https://smartethnics.com"
+                        : project.id === 4
+                          ? "https://fsk-foil.pages.dev"
+                          : project.id === 5
+                            ? "https://goridezo.com"
+                            : project.id === 6
+                              ? "https://forkups.vercel.app"
+                              : "#"
                 }
                 target="_blank"
                 rel="noopener noreferrer"
@@ -225,14 +247,16 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               {project.id === 1
                 ? "The Lubeck Elevators Website, developed by Shudveta IT Solutions, was built using Next.js and Tailwind CSS, with media hosted and optimized via Cloudinary. Designed for speed, responsiveness, and elegance, it delivers a professional digital presence that highlights Lubeck's engineering excellence and modern identity."
                 : project.id === 2
-                ? "The Lubeck Exports E-commerce Platform, developed by Shudveta IT Solutions, was built using Next.js, Tailwind CSS, and Firebase, with real-time stock integration via third-party APIs. Designed for automation, scalability, and seamless user experience, it delivers a modern digital marketplace that streamlines export operations and maximizes business efficiency."
-                : project.id === 3
-                ? "The Smart Ethnics E-commerce Platform, developed by Shudveta IT Solutions, was built using Next.js, Tailwind CSS, and Firebase, with secure payment integration via Razorpay. Designed for performance, security, and seamless user experience, it delivers a complete online store that transforms apparel business operations into a digital-first marketplace."
-                : project.id === 4
-                ? "The FSK Foil Products Website, developed by Shudveta IT Solutions, was built using Next.js and Tailwind CSS to showcase specialized Foil-Scrim-Kraft (FSK) products used in the insulation industry. Designed for comprehensive product information and industry applications, it delivers a professional platform that highlights FSK's role as a durable, fire-resistant facing for insulation blankets and duct wraps."
-                : project.id === 5
-                ? "The Ridezo Transportation Platform, developed by Shudveta IT Solutions, was built using Next.js and Tailwind CSS to provide a comprehensive transportation booking system. Designed for pre-booked rides, office subscriptions, and transparent pricing, it delivers a reliable platform that connects users with professional drivers for daily commuting and travel needs."
-                : `${project.category} • ${project.year}`
+                  ? "The Lubeck Exports E-commerce Platform, developed by Shudveta IT Solutions, was built using Next.js, Tailwind CSS, and Firebase, with real-time stock integration via third-party APIs. Designed for automation, scalability, and seamless user experience, it delivers a modern digital marketplace that streamlines export operations and maximizes business efficiency."
+                  : project.id === 3
+                    ? "The Smart Ethnics E-commerce Platform, developed by Shudveta IT Solutions, was built using Next.js, Tailwind CSS, and Firebase, with secure payment integration via Razorpay. Designed for performance, security, and seamless user experience, it delivers a complete online store that transforms apparel business operations into a digital-first marketplace."
+                    : project.id === 4
+                      ? "The FSK Foil Products Website, developed by Shudveta IT Solutions, was built using Next.js and Tailwind CSS to showcase specialized Foil-Scrim-Kraft (FSK) products used in the insulation industry. Designed for comprehensive product information and industry applications, it delivers a professional platform that highlights FSK's role as a durable, fire-resistant facing for insulation blankets and duct wraps."
+                      : project.id === 5
+                        ? "The Ridezo Transportation Platform, developed by Shudveta IT Solutions, was built using Next.js and Tailwind CSS to provide a comprehensive transportation booking system. Designed for pre-booked rides, office subscriptions, and transparent pricing, it delivers a reliable platform that connects users with professional drivers for daily commuting and travel needs."
+                        : project.id === 6
+                          ? "The Forkup Italian Pasta Website, developed by Shudveta IT Solutions, was built using Next.js 16 and Tailwind CSS v4 to establish a premium digital presence for North Delhi's premier pasta destination. Featuring a neon-styled aesthetic and a seamless ordering system, it provides a modern, high-performance platform for authentic Italian cuisine enthusiasts."
+                          : `${project.category} • ${project.year}`
               }
             </p>
           </div>
@@ -471,7 +495,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
                     <div className="outcome-content space-y-6">
                       <p className="text-gray-700 leading-relaxed">
-                        The final product was a lightweight, production-grade website that embodies Lubeck's precision-driven brand identity. With seamless navigation, fast loading, and rock-solid uptime, it became a digital showcase of the company's engineering expertise.
+                        The final product was a lightweight, production-grade website that embodies Lubeck&apos;s precision-driven brand identity. With seamless navigation, fast loading, and rock-solid uptime, it became a digital showcase of the company&apos;s engineering expertise.
                       </p>
 
                       <div className="results-card">
@@ -523,7 +547,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   {/* Introduction */}
                   <div className="blog-intro mb-12">
                     <p className="text-xl leading-relaxed text-gray-700 font-medium">
-                      The Lubeck Exports E-commerce Platform was developed by Shudveta IT Solutions to digitize the company's export catalog and streamline their product management operations. The objective was to build a fast, secure, and dynamic e-commerce system with real-time stock updates and full admin control — replacing manual data handling with a modern, automated workflow.
+                      The Lubeck Exports E-commerce Platform was developed by Shudveta IT Solutions to digitize the company&apos;s export catalog and streamline their product management operations. The objective was to build a fast, secure, and dynamic e-commerce system with real-time stock updates and full admin control — replacing manual data handling with a modern, automated workflow.
                     </p>
                   </div>
 
@@ -665,7 +689,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
                     <div className="outcome-content space-y-6">
                       <p className="text-gray-700 leading-relaxed">
-                        The platform delivered a seamless, production-grade e-commerce experience — replacing outdated manual processes with an intelligent, automated system. Lubeck's export operations became faster, more accurate, and easier to manage through a single centralized panel.
+                        The platform delivered a seamless, production-grade e-commerce experience — replacing outdated manual processes with an intelligent, automated system. Lubeck&apos;s export operations became faster, more accurate, and easier to manage through a single centralized panel.
                       </p>
 
                       <div className="results-card">
@@ -863,7 +887,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
                     <div className="outcome-content space-y-6">
                       <p className="text-gray-700 leading-relaxed">
-                        The result was a fully functional e-commerce system that transformed Smart Ethnics' operations into a digital-first business. With complete control over inventory, secure payments, and an elegant shopping interface, the platform elevated the brand's presence and made management effortless.
+                        The result was a fully functional e-commerce system that transformed Smart Ethnics&apos; operations into a digital-first business. With complete control over inventory, secure payments, and an elegant shopping interface, the platform elevated the brand&apos;s presence and made management effortless.
                       </p>
 
                       <div className="results-card">
@@ -1307,6 +1331,200 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                     </div>
                   </div>
                 </>
+              ) : projectId === 6 ? (
+                <>
+                  {/* Forkup Content */}
+                  {/* Introduction */}
+                  <div className="blog-intro mb-12">
+                    <p className="text-xl leading-relaxed text-gray-700 font-medium">
+                      Forkup is North Delhi&apos;s premier Italian pasta destination, specializing in &quot;Four Cup Pasta&quot; - authentic Italian cuisine crafted fresh daily. The restaurant needed a digital presence that matched their sophisticated branding and culinary excellence. We built a sleek, mobile-first website that showcases their menu, enables seamless online ordering, and captures the vibrant energy of their authentic Italian experience.
+                    </p>
+                  </div>
+
+                  {/* Tech Stack Section */}
+                  <div className="blog-section mb-16">
+                    <div className="section-header mb-8">
+                      <div className="flex items-center gap-4 mb-3">
+                        <div className="icon-wrapper">
+                          <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                          </svg>
+                        </div>
+                        <h3 className="section-title">Tech Stack Overview</h3>
+                      </div>
+                      <div className="section-divider"></div>
+                    </div>
+
+                    <div className="tech-stack-grid">
+                      <div className="tech-item">
+                        <div className="tech-label">Frontend Framework:</div>
+                        <div className="tech-value">Next.js 16, React 19</div>
+                      </div>
+                      <div className="tech-item">
+                        <div className="tech-label">Styling:</div>
+                        <div className="tech-value">Tailwind CSS v4</div>
+                      </div>
+                      <div className="tech-item">
+                        <div className="tech-label">Build System:</div>
+                        <div className="tech-value">Turbopack</div>
+                      </div>
+                      <div className="tech-item">
+                        <div className="tech-label">Asset Handling:</div>
+                        <div className="tech-value">Next.js Image & Video Optimization</div>
+                      </div>
+                      <div className="tech-item">
+                        <div className="tech-label">Icons:</div>
+                        <div className="tech-value">React Icons (Ionicons)</div>
+                      </div>
+                      <div className="tech-item">
+                        <div className="tech-label">Deployment:</div>
+                        <div className="tech-value">Vercel</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Development Approach Section */}
+                  <div className="blog-section mb-16">
+                    <div className="section-header mb-8">
+                      <div className="flex items-center gap-4 mb-3">
+                        <div className="icon-wrapper">
+                          <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                          </svg>
+                        </div>
+                        <h3 className="section-title">Development Approach</h3>
+                      </div>
+                      <div className="section-divider"></div>
+                    </div>
+
+                    <div className="approach-content space-y-6">
+                      <p className="text-gray-700 leading-relaxed">
+                        We built Forkup as a modern single-page application using the latest Next.js 16 App Router architecture. The biggest challenge was creating a visually stunning interface that matched the restaurant&apos;s premium Italian aesthetic while maintaining excellent performance. We implemented a custom neon-themed design system with carefully crafted gradients, glow effects, and typography that evokes the sophistication of Italian cuisine.
+                      </p>
+                      <p className="text-gray-700 leading-relaxed">
+                        The website features a full-screen video hero section that immediately captures attention, followed by an elegant order form with real-time validation. We replaced the traditional multi-step ordering process with a single comprehensive form that collects all necessary information while providing immediate feedback and a seamless post-order experience.
+                      </p>
+                      <p className="text-gray-700 leading-relaxed">
+                        Animations were a key part of the experience. Using the Intersection Observer API, we implemented smooth scroll-reveal effects that bring the content to life as the user explores the menu. The entire site is built with a mobile-first philosophy, ensuring that hunger-driven users can place an order in seconds from any device.
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Core Features Section */}
+                  <div className="blog-section mb-16">
+                    <div className="section-header mb-8">
+                      <div className="flex items-center gap-4 mb-3">
+                        <div className="icon-wrapper">
+                          <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                          </svg>
+                        </div>
+                        <h3 className="section-title">Core Features Implemented</h3>
+                      </div>
+                      <div className="section-divider"></div>
+                    </div>
+
+                    <div className="features-list space-y-4">
+                      <div className="feature-item">
+                        <div className="feature-bullet"></div>
+                        <div className="feature-content">
+                          <span className="feature-label">Hero Video Section:</span> Full-screen background video with vibrant neon branding overlays.
+                        </div>
+                      </div>
+                      <div className="feature-item">
+                        <div className="feature-bullet"></div>
+                        <div className="feature-content">
+                          <span className="feature-label">Dynamic Menu:</span> Interactive pasta selection system with live pricing and chef descriptions.
+                        </div>
+                      </div>
+                      <div className="feature-item">
+                        <div className="feature-bullet"></div>
+                        <div className="feature-content">
+                          <span className="feature-label">Ordering Flow:</span> Streamlined form for collection of delivery details, pincode validation, and coupon codes.
+                        </div>
+                      </div>
+                      <div className="feature-item">
+                        <div className="feature-bullet"></div>
+                        <div className="feature-content">
+                          <span className="feature-label">Feedback System:</span> Custom interactive star-rating and review collection post-order.
+                        </div>
+                      </div>
+                      <div className="feature-item">
+                        <div className="feature-bullet"></div>
+                        <div className="feature-content">
+                          <span className="feature-label">Infinite Scroll Banner:</span> Dynamic text animations showcasing fresh ingredients and authentic recipes.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Outcome Section */}
+                  <div className="blog-section mb-16">
+                    <div className="section-header mb-8">
+                      <div className="flex items-center gap-4 mb-3">
+                        <div className="icon-wrapper">
+                          <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                          </svg>
+                        </div>
+                        <h3 className="section-title">Outcome</h3>
+                      </div>
+                      <div className="section-divider"></div>
+                    </div>
+
+                    <div className="outcome-content space-y-6">
+                      <p className="text-gray-700 leading-relaxed">
+                        The final product is a production-grade restaurant platform that stands out in the crowded North Delhi food market. It reduced customer inquiry time by 70% through the self-service ordering system, effectively digitizing the restaurant&apos;s entire front-of-house experience.
+                      </p>
+
+                      <div className="results-card">
+                        <h5 className="results-title">Result Highlights:</h5>
+                        <div className="results-list">
+                          <div className="result-item">
+                            <div className="result-bullet"></div>
+                            <span>Lighthouse performance score of 95+ through Next.js 16 optimization</span>
+                          </div>
+                          <div className="result-item">
+                            <div className="result-bullet"></div>
+                            <span>70% reduction in manual coordination for orders</span>
+                          </div>
+                          <div className="result-item">
+                            <div className="result-bullet"></div>
+                            <span>Sub-800ms initial page load with Turbopack and SSR</span>
+                          </div>
+                          <div className="result-item">
+                            <div className="result-bullet"></div>
+                            <span>0 linting or accessibility errors in final audit</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Summary Section */}
+                  <div className="summary-card">
+                    <div className="summary-header">
+                      <div className="flex items-center gap-3 mb-4">
+                        <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                        <h3 className="summary-title">In Summary</h3>
+                      </div>
+                    </div>
+                    <div className="summary-content">
+                      <div className="summary-item">
+                        <span className="summary-label">Built with:</span>
+                        <span className="summary-value">Next.js 16, React 19, Tailwind CSS v4, TypeScript, Vercel</span>
+                      </div>
+                      <div className="summary-item">
+                        <span className="summary-label">Focus:</span>
+                        <span className="summary-value">Premium Italian Branding, Mobile-First Ordering, and High Performance</span>
+                      </div>
+                    </div>
+                  </div>
+                </>
               ) : (
                 <div className="text-center py-12">
                   <p className="text-gray-600">Content coming soon...</p>
@@ -1315,7 +1533,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             </div>
 
             <div className="text-center mt-12">
-              <a
+              <Link
                 href="/portfolio"
                 className="inline-flex items-center gap-2 text-white px-8 py-4 rounded-lg hover:opacity-90 transition-colors duration-300 font-medium"
                 style={{ backgroundColor: '#002F6C' }}
@@ -1324,7 +1542,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                 </svg>
                 Back to Portfolio
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -1347,7 +1565,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               <h4 className="text-sm font-semibold mb-3 text-gray-200">Quick Links</h4>
               <ul className="space-y-2">
                 <li><a href="#home" className="text-gray-400 hover:text-white text-xs sm:text-sm transition-colors duration-300">Home</a></li>
-                <li><a href="/portfolio" className="text-gray-400 hover:text-white text-xs sm:text-sm transition-colors duration-300">Portfolio</a></li>
+                <li><Link href="/portfolio" className="text-gray-400 hover:text-white text-xs sm:text-sm transition-colors duration-300">Portfolio</Link></li>
                 <li><a href="#about" className="text-gray-400 hover:text-white text-xs sm:text-sm transition-colors duration-300">About Us</a></li>
                 <li><a href="/contact" className="text-gray-400 hover:text-white text-xs sm:text-sm transition-colors duration-300">Contact</a></li>
               </ul>

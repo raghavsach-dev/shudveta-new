@@ -110,8 +110,8 @@ export default function IPD3DLogo({ width = 200, height = 200, className = '' }:
         // Fallback: show text logo
         if (mountRef.current) {
           mountRef.current.innerHTML = `
-            <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #3b82f6, #8b5cf6); border-radius: 12px; color: white; font-weight: bold; font-size: 24px;">
-              IPD
+            <div style="width: 100%; height: 100%; position: relative; border-radius: 12px; overflow: hidden; background: #000;">
+              <img src="/ipdnowlogo.png" alt="IPD Now Logo" style="width: 100%; height: 100%; object-fit: cover;" />
             </div>
           `;
         }
