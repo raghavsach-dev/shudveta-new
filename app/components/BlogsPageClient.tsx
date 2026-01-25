@@ -52,7 +52,7 @@ export default function BlogsPageClient() {
           "url": "https://shudveta.com/logo.png"
         }
       },
-      "blogPost": blogs.map((blog, index) => ({
+      "blogPost": blogs.map((blog) => ({
         "@type": "BlogPosting",
         "@id": `https://shudveta.com/blogs/${blog.id}#blogpost`,
         "headline": blog.title,
@@ -114,7 +114,7 @@ export default function BlogsPageClient() {
         document.head.removeChild(existingScript);
       }
     };
-  }, []);
+  }, [blogs]);
 
   return (
     <div className="relative">
@@ -371,10 +371,10 @@ export default function BlogsPageClient() {
             <div>
               <h4 className="text-sm font-semibold mb-3 text-gray-200">Quick Links</h4>
               <ul className="space-y-2">
-                <li><a href="#home" className="text-gray-400 hover:text-white text-xs sm:text-sm transition-colors duration-300">Home</a></li>
-                <li><a href="/portfolio" className="text-gray-400 hover:text-white text-xs sm:text-sm transition-colors duration-300">Portfolio</a></li>
-                <li><a href="#about" className="text-gray-400 hover:text-white text-xs sm:text-sm transition-colors duration-300">About Us</a></li>
-                <li><a href="/contact" className="text-gray-400 hover:text-white text-xs sm:text-sm transition-colors duration-300">Contact</a></li>
+                <li><Link href="/" className="text-gray-400 hover:text-white text-xs sm:text-sm transition-colors duration-300">Home</Link></li>
+                <li><Link href="/portfolio" className="text-gray-400 hover:text-white text-xs sm:text-sm transition-colors duration-300">Portfolio</Link></li>
+                <li><Link href="/#about" className="text-gray-400 hover:text-white text-xs sm:text-sm transition-colors duration-300">About Us</Link></li>
+                <li><Link href="/contact" className="text-gray-400 hover:text-white text-xs sm:text-sm transition-colors duration-300">Contact</Link></li>
               </ul>
             </div>
 

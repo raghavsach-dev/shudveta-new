@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useState, useEffect } from "react";
-import Head from "next/head";
+import { Rocket } from "lucide-react";
 
 export default function HomePageClient() {
   const { scrollYProgress } = useScroll();
@@ -156,7 +156,7 @@ export default function HomePageClient() {
           <div className="text-center max-w-5xl mx-auto">
             {/* Badge */}
             <div className="inline-flex items-center px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mt-6 sm:mt-10 mb-6 sm:mb-8">
-              <span className="text-xs sm:text-sm font-medium text-blue-200 mr-2">🚀</span>
+              <Rocket className="w-4 h-4 sm:w-5 sm:h-5 text-blue-200 mr-2" />
               <span className="text-xs sm:text-sm font-medium text-white">Future-Ready Technology Solutions</span>
             </div>
 
@@ -186,7 +186,7 @@ export default function HomePageClient() {
               >
                 Digital Reality
               </motion.span>
-          </h1>
+            </h1>
 
             {/* Subtitle */}
             <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-6 sm:mb-10 max-w-3xl mx-auto leading-relaxed px-4">
@@ -290,39 +290,39 @@ export default function HomePageClient() {
               <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4 sm:mb-6" style={{ color: '#002F6C' }}>Meet Our Founders</h3>
               <div className="space-y-3 sm:space-y-4 text-gray-700 leading-relaxed text-sm sm:text-base">
                 <p className="text-base sm:text-lg">
-                  Shudveta was founded by a team of passionate technologists and visionaries who recognized the need for intelligent, scalable solutions in today's rapidly evolving digital landscape.
+                  Shudveta was founded by a team of passionate technologists and visionaries who recognized the need for intelligent, scalable solutions in today&apos;s rapidly evolving digital landscape.
                 </p>
                 <p>
                   The creative force of Shudveta, <span style={{ color: '#002F6C', fontWeight: '600' }}>Dhruvi Mittal</span> blends logic with imagination. With a deep passion for technology and design, she focuses on creating experiences that feel intuitive, purposeful, and human. Her calm precision and forward-thinking mindset shape the foundation of every project Shudveta delivers.
                 </p>
                 <p>
-                  The technical powerhouse of Shudveta, <span style={{ color: '#002F6C', fontWeight: '600' }}>Raghav Sachdev</span> turns bold ideas into seamless realities. His expertise in AI, automation, and full-stack development drives the agency's innovation. With a relentless curiosity for building smarter systems, he ensures every solution reflects Shudveta's spirit of intelligence and integrity.
+                  The technical powerhouse of Shudveta, <span style={{ color: '#002F6C', fontWeight: '600' }}>Raghav Sachdev</span> turns bold ideas into seamless realities. His expertise in AI, automation, and full-stack development drives the agency&apos;s innovation. With a relentless curiosity for building smarter systems, he ensures every solution reflects Shudveta&apos;s spirit of intelligence and integrity.
                 </p>
                 <p>
                   Together, they create a dynamic duo that brings together creativity, technical expertise, and a commitment to delivering exceptional results.
                 </p>
               </div>
               <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4">
-                <a href="https://www.linkedin.com/in/dhruvimit06/" target="_blank" rel="noopener noreferrer" className="group relative bg-transparent border-2 border-gray-300 text-gray-700 px-6 py-3 sm:px-8 sm:py-4 rounded-lg font-medium text-sm sm:text-base hover:bg-blue-600 hover:border-blue-600 hover:text-white hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center justify-center overflow-hidden w-full">
+                <Link href="https://www.linkedin.com/in/dhruvimit06/" target="_blank" rel="noopener noreferrer" className="group relative bg-transparent border-2 border-gray-300 text-gray-700 px-6 py-3 sm:px-8 sm:py-4 rounded-lg font-medium text-sm sm:text-base hover:bg-blue-600 hover:border-blue-600 hover:text-white hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center justify-center overflow-hidden w-full">
                   <svg className="absolute left-3 sm:left-4 w-4 h-4 sm:w-5 sm:h-5 opacity-0 group-hover:opacity-100 transition-all duration-300 transform -translate-x-2 group-hover:translate-x-0" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                   </svg>
                   <span className="text-center">Dhruvi Mittal</span>
                   <svg className="absolute right-3 sm:right-4 w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                   </svg>
                   <div className="absolute inset-0 bg-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </a>
-                <a href="https://www.linkedin.com/in/raghavsach-dev/" target="_blank" rel="noopener noreferrer" className="group relative bg-transparent border-2 border-gray-300 text-gray-700 px-6 py-3 sm:px-8 sm:py-4 rounded-lg font-medium text-sm sm:text-base hover:bg-blue-600 hover:border-blue-600 hover:text-white hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center justify-center overflow-hidden w-full">
+                </Link>
+                <Link href="https://www.linkedin.com/in/raghavsach-dev/" target="_blank" rel="noopener noreferrer" className="group relative bg-transparent border-2 border-gray-300 text-gray-700 px-6 py-3 sm:px-8 sm:py-4 rounded-lg font-medium text-sm sm:text-base hover:bg-blue-600 hover:border-blue-600 hover:text-white hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center justify-center overflow-hidden w-full">
                   <svg className="absolute left-3 sm:left-4 w-4 h-4 sm:w-5 sm:h-5 opacity-0 group-hover:opacity-100 transition-all duration-300 transform -translate-x-2 group-hover:translate-x-0" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                   </svg>
                   <span className="text-center">Raghav Sachdev</span>
                   <svg className="absolute right-3 sm:right-4 w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                   </svg>
                   <div className="absolute inset-0 bg-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -335,27 +335,27 @@ export default function HomePageClient() {
           <div className="flex justify-between items-center h-20 md:h-28">
             {/* Logo */}
             <div className="flex-shrink-0">
-              <a href="/" className="block hover:opacity-80 transition-opacity duration-200">
-            <Image
+              <Link href="/" className="block hover:opacity-80 transition-opacity duration-200">
+                <Image
                   src="/logo.png"
                   alt="Shudveta IT Solutions - AI, Automation & Digital Innovation Experts"
                   width={360}
                   height={180}
                   className="h-16 md:h-24 w-auto"
                 />
-              </a>
+              </Link>
             </div>
 
             {/* Navigation Links */}
             <div className="hidden md:block">
               <div className="ml-6 md:ml-10 flex items-center space-x-3 md:space-x-4">
-                <a href="#home" className="flex items-center gap-1.5 text-white hover:text-gray-300 px-2 md:px-3 py-1.5 md:py-2 rounded-md text-sm md:text-base font-medium transition-colors duration-200">
+                <Link href="#home" className="flex items-center gap-1.5 text-white hover:text-gray-300 px-2 md:px-3 py-1.5 md:py-2 rounded-md text-sm md:text-base font-medium transition-colors duration-200">
                   <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
                   </svg>
                   Home
-          </a>
-          <a
+                </Link>
+                <a
                   href="#behind-shudveta"
                   onClick={(e) => {
                     e.preventDefault();
@@ -388,24 +388,24 @@ export default function HomePageClient() {
                   </svg>
                   About
                 </a>
-                <a href="/portfolio" className="flex items-center gap-1.5 text-white hover:text-gray-300 px-2 md:px-3 py-1.5 md:py-2 rounded-md text-sm md:text-base font-medium transition-colors duration-200">
+                <Link href="/portfolio" className="flex items-center gap-1.5 text-white hover:text-gray-300 px-2 md:px-3 py-1.5 md:py-2 rounded-md text-sm md:text-base font-medium transition-colors duration-200">
                   <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
                   </svg>
                   Portfolio
-                </a>
-                <a href="/blogs" className="flex items-center gap-1.5 text-white hover:text-gray-300 px-2 md:px-3 py-1.5 md:py-2 rounded-md text-sm md:text-base font-medium transition-colors duration-200">
+                </Link>
+                <Link href="/blogs" className="flex items-center gap-1.5 text-white hover:text-gray-300 px-2 md:px-3 py-1.5 md:py-2 rounded-md text-sm md:text-base font-medium transition-colors duration-200">
                   <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                   </svg>
                   Blogs
-                </a>
-                <a href="/contact" className="flex items-center gap-1.5 text-white hover:text-gray-300 px-2 md:px-3 py-1.5 md:py-2 rounded-md text-sm md:text-base font-medium transition-colors duration-200">
+                </Link>
+                <Link href="/contact" className="flex items-center gap-1.5 text-white hover:text-gray-300 px-2 md:px-3 py-1.5 md:py-2 rounded-md text-sm md:text-base font-medium transition-colors duration-200">
                   <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                   Contact
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -533,7 +533,7 @@ export default function HomePageClient() {
               </div>
               <div className="lg:w-1/2 space-y-3 sm:space-y-4">
                 <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 sm:mb-4" style={{ color: '#002F6C' }}>Lubeck Elevators Website</h3>
-                <p className="text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed">A fully responsive and visually refined corporate website designed to represent Lubeck Elevators' brand identity and product portfolio. The site highlights their services, quality standards, and technical expertise through a clean UI, smooth transitions, and an intuitive layout. Built with performance and aesthetics in mind, it delivers a professional digital presence that strengthens client trust and brand credibility, while ensuring seamless accessibility across all devices.</p>
+                <p className="text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed">A fully responsive and visually refined corporate website designed to represent Lubeck Elevators&apos; brand identity and product portfolio. The site highlights their services, quality standards, and technical expertise through a clean UI, smooth transitions, and an intuitive layout. Built with performance and aesthetics in mind, it delivers a professional digital presence that strengthens client trust and brand credibility, while ensuring seamless accessibility across all devices.</p>
                 <div className="flex flex-wrap justify-between w-full gap-2">
                   <span className="inline-flex items-center justify-center flex-1 px-2 py-2 bg-yellow-50 text-yellow-700 text-sm font-medium rounded-xl border border-yellow-200/60 hover:bg-yellow-100 hover:border-yellow-300 hover:text-yellow-800 transition-all duration-300 hover:shadow-sm">
                     <div className="w-1.5 h-1.5 bg-yellow-500 rounded-full mr-2 opacity-60"></div>
@@ -557,20 +557,20 @@ export default function HomePageClient() {
                   </span>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-3">
-                  <a href="/portfolio/1" className="group relative flex-1 bg-transparent border-2 border-gray-300 text-gray-700 px-4 py-2.5 sm:py-3 rounded-lg font-medium text-xs sm:text-sm hover:text-white hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center justify-center" style={{ backgroundColor: 'transparent' }} onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#002F6C'; e.currentTarget.style.borderColor = '#002F6C'; }} onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = 'transparent'; e.currentTarget.style.borderColor = '#d1d5db'; }}>
+                  <Link href="/portfolio/1" className="group relative flex-1 bg-transparent border-2 border-gray-300 text-gray-700 px-4 py-2.5 sm:py-3 rounded-lg font-medium text-xs sm:text-sm hover:text-white hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center justify-center" style={{ backgroundColor: 'transparent' }} onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.backgroundColor = '#002F6C'; (e.currentTarget as HTMLElement).style.borderColor = '#002F6C'; }} onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.backgroundColor = 'transparent'; (e.currentTarget as HTMLElement).style.borderColor = '#d1d5db'; }}>
                     <span>Read More</span>
                     <svg className="ml-2 w-3 h-3 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
                     <div className="absolute inset-0 bg-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  </a>
-                  <a href="https://lubeckelevators.com/" target="_blank" rel="noopener noreferrer" className="group relative flex-1 bg-transparent border-2 border-gray-300 text-gray-700 px-4 py-2.5 sm:py-3 rounded-lg font-medium text-xs sm:text-sm hover:text-white hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center justify-center block" style={{ backgroundColor: 'transparent' }} onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#002F6C'; e.currentTarget.style.borderColor = '#002F6C'; }} onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = 'transparent'; e.currentTarget.style.borderColor = '#d1d5db'; }}>
+                  </Link>
+                  <Link href="https://lubeckelevators.com/" target="_blank" rel="noopener noreferrer" className="group relative flex-1 bg-transparent border-2 border-gray-300 text-gray-700 px-4 py-2.5 sm:py-3 rounded-lg font-medium text-xs sm:text-sm hover:text-white hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center justify-center block" style={{ backgroundColor: 'transparent' }} onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#002F6C'; e.currentTarget.style.borderColor = '#002F6C'; }} onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = 'transparent'; e.currentTarget.style.borderColor = '#d1d5db'; }}>
                     <span>View Website</span>
                     <svg className="ml-2 w-3 h-3 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                     </svg>
                     <div className="absolute inset-0 bg-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -596,7 +596,7 @@ export default function HomePageClient() {
               </div>
               <div className="lg:w-1/2 space-y-3 sm:space-y-4">
                 <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 sm:mb-4" style={{ color: '#002F6C' }}>Lubeck Exports Platform</h3>
-                <p className="text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed">A comprehensive full-stack e-commerce solution developed to digitize Lubeck Exports' product catalog and sales operations. The platform features a custom admin panel for product and order management, along with third-party API integration for live stock updates and real-time data synchronization. Designed for speed, security, and scalability, it streamlines inventory handling, enhances customer experience, and brings complete automation to the company's export workflow.</p>
+                <p className="text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed">A comprehensive full-stack e-commerce solution developed to digitize Lubeck Exports&apos; product catalog and sales operations. The platform features a custom admin panel for product and order management, along with third-party API integration for live stock updates and real-time data synchronization. Designed for speed, security, and scalability, it streamlines inventory handling, enhances customer experience, and brings complete automation to the company&apos;s export workflow.</p>
                 <div className="flex flex-wrap justify-between w-full gap-2">
                   <span className="inline-flex items-center justify-center flex-1 px-2 py-2 bg-blue-50 text-blue-600 text-sm font-medium rounded-xl border border-blue-200/60 hover:bg-blue-100 hover:border-blue-300 hover:text-blue-800 transition-all duration-300 hover:shadow-sm">
                     <div className="w-1.5 h-1.5 bg-blue-400 rounded-full mr-2 opacity-60"></div>
@@ -620,20 +620,20 @@ export default function HomePageClient() {
                   </span>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-3">
-                  <a href="/portfolio/2" className="group relative flex-1 bg-transparent border-2 border-gray-300 text-gray-700 px-4 py-2.5 sm:py-3 rounded-lg font-medium text-xs sm:text-sm hover:text-white hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center justify-center" style={{ backgroundColor: 'transparent' }} onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#002F6C'; e.currentTarget.style.borderColor = '#002F6C'; }} onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = 'transparent'; e.currentTarget.style.borderColor = '#d1d5db'; }}>
+                  <Link href="/portfolio/2" className="group relative flex-1 bg-transparent border-2 border-gray-300 text-gray-700 px-4 py-2.5 sm:py-3 rounded-lg font-medium text-xs sm:text-sm hover:text-white hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center justify-center" style={{ backgroundColor: 'transparent' }} onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.backgroundColor = '#002F6C'; (e.currentTarget as HTMLElement).style.borderColor = '#002F6C'; }} onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.backgroundColor = 'transparent'; (e.currentTarget as HTMLElement).style.borderColor = '#d1d5db'; }}>
                     <span>Read More</span>
                     <svg className="ml-2 w-3 h-3 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
                     <div className="absolute inset-0 bg-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  </a>
-                  <a href="https://lubeckexports.com/" target="_blank" rel="noopener noreferrer" className="group relative flex-1 bg-transparent border-2 border-gray-300 text-gray-700 px-4 py-2.5 sm:py-3 rounded-lg font-medium text-xs sm:text-sm hover:text-white hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center justify-center block" style={{ backgroundColor: 'transparent' }} onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#002F6C'; e.currentTarget.style.borderColor = '#002F6C'; }} onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = 'transparent'; e.currentTarget.style.borderColor = '#d1d5db'; }}>
+                  </Link>
+                  <Link href="https://lubeckexports.com/" target="_blank" rel="noopener noreferrer" className="group relative flex-1 bg-transparent border-2 border-gray-300 text-gray-700 px-4 py-2.5 sm:py-3 rounded-lg font-medium text-xs sm:text-sm hover:text-white hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center justify-center block" style={{ backgroundColor: 'transparent' }} onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#002F6C'; e.currentTarget.style.borderColor = '#002F6C'; }} onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = 'transparent'; e.currentTarget.style.borderColor = '#d1d5db'; }}>
                     <span>View Website</span>
                     <svg className="ml-2 w-3 h-3 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                     </svg>
                     <div className="absolute inset-0 bg-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -659,7 +659,7 @@ export default function HomePageClient() {
               </div>
               <div className="lg:w-1/2 space-y-3 sm:space-y-4">
                 <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 sm:mb-4" style={{ color: '#002F6C' }}>Smart Ethnics Platform</h3>
-                <p className="text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed">A modern, full-featured online shopping platform built for Smart Ethnics to showcase and sell their apparel collection seamlessly. The system includes a custom admin panel for managing products, orders, and customers, paired with a secure payment gateway for smooth and reliable transactions. Designed with a clean, responsive UI and optimized backend architecture, it delivers a fast, user-friendly, and professional shopping experience that reflects the brand's elegance and authenticity.</p>
+                <p className="text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed">A modern, full-featured online shopping platform built for Smart Ethnics to showcase and sell their apparel collection seamlessly. The system includes a custom admin panel for managing products, orders, and customers, paired with a secure payment gateway for smooth and reliable transactions. Designed with a clean, responsive UI and optimized backend architecture, it delivers a fast, user-friendly, and professional shopping experience that reflects the brand&apos;s elegance and authenticity.</p>
                 <div className="flex flex-wrap justify-between w-full gap-2">
                   <span className="inline-flex items-center justify-center flex-1 px-2 py-2 bg-orange-50 text-orange-600 text-sm font-medium rounded-xl border border-orange-200/60 hover:bg-orange-100 hover:border-orange-300 hover:text-orange-800 transition-all duration-300 hover:shadow-sm">
                     <div className="w-1.5 h-1.5 bg-orange-400 rounded-full mr-2 opacity-60"></div>
@@ -683,26 +683,26 @@ export default function HomePageClient() {
                   </span>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-3">
-                  <a href="https://smartethnics.com/" target="_blank" rel="noopener noreferrer" className="group relative flex-1 bg-transparent border-2 border-gray-300 text-gray-700 px-4 py-2.5 sm:py-3 rounded-lg font-medium text-xs sm:text-sm hover:text-white hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center justify-center block" style={{ backgroundColor: 'transparent' }} onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#002F6C'; e.currentTarget.style.borderColor = '#002F6C'; }} onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = 'transparent'; e.currentTarget.style.borderColor = '#d1d5db'; }}>
+                  <Link href="https://smartethnics.com/" target="_blank" rel="noopener noreferrer" className="group relative flex-1 bg-transparent border-2 border-gray-300 text-gray-700 px-4 py-2.5 sm:py-3 rounded-lg font-medium text-xs sm:text-sm hover:text-white hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center justify-center block" style={{ backgroundColor: 'transparent' }} onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#002F6C'; e.currentTarget.style.borderColor = '#002F6C'; }} onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = 'transparent'; e.currentTarget.style.borderColor = '#d1d5db'; }}>
                     <span>View Website</span>
                     <svg className="ml-2 w-3 h-3 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                     </svg>
                     <div className="absolute inset-0 bg-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
           </div>
 
           <div className="text-center mt-12 sm:mt-16 px-4">
-            <a href="/portfolio" className="group relative inline-flex items-center px-6 py-3 sm:px-8 sm:py-4 bg-white border-2 text-gray-900 font-semibold text-base sm:text-lg rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden">
+            <Link href="/portfolio" className="group relative inline-flex items-center px-6 py-3 sm:px-8 sm:py-4 bg-white border-2 text-gray-900 font-semibold text-base sm:text-lg rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden">
               <span className="relative z-10 group-hover:text-white transition-colors duration-300">View All Projects</span>
               <svg className="ml-2 sm:ml-3 w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 group-hover:text-white transition-all duration-300 relative z-10" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
               <div className="absolute inset-0 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" style={{ backgroundColor: '#002F6C' }}></div>
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -1000,10 +1000,10 @@ export default function HomePageClient() {
             <div>
               <h4 className="text-sm font-semibold mb-3 text-gray-200">Quick Links</h4>
               <ul className="space-y-2">
-                <li><a href="#home" className="text-gray-400 hover:text-white text-xs sm:text-sm transition-colors duration-300">Home</a></li>
-                <li><a href="/portfolio" className="text-gray-400 hover:text-white text-xs sm:text-sm transition-colors duration-300">Portfolio</a></li>
-                <li><a href="#about" className="text-gray-400 hover:text-white text-xs sm:text-sm transition-colors duration-300">About Us</a></li>
-                <li><a href="/contact" className="text-gray-400 hover:text-white text-xs sm:text-sm transition-colors duration-300">Contact</a></li>
+                <li><Link href="/" className="text-gray-400 hover:text-white text-xs sm:text-sm transition-colors duration-300">Home</Link></li>
+                <li><Link href="/portfolio" className="text-gray-400 hover:text-white text-xs sm:text-sm transition-colors duration-300">Portfolio</Link></li>
+                <li><Link href="/#about" className="text-gray-400 hover:text-white text-xs sm:text-sm transition-colors duration-300">About Us</Link></li>
+                <li><Link href="/contact" className="text-gray-400 hover:text-white text-xs sm:text-sm transition-colors duration-300">Contact</Link></li>
               </ul>
             </div>
 

@@ -11,13 +11,13 @@ export interface ChatMessage {
 }
 
 // Utility function for creating IDs
-function createId(prefix: string) {
+/* function createId(prefix: string) {
   if (typeof crypto !== "undefined" && crypto.randomUUID) {
     return `${prefix}-${crypto.randomUUID()}`;
   }
 
   return `${prefix}-${Date.now()}-${Math.random().toString(16).slice(2)}`;
-}
+} */
 
 // Contact Form Component
 const ContactForm = ({ fields, onSuccess }: { fields: string[]; onSuccess?: (content: string, role?: "user" | "assistant") => void }) => {
@@ -262,7 +262,7 @@ export function NectarAIChat({
             </pre>
           </div>
         );
-      } catch (error) {
+      } catch (_error) {
         // If JSON parsing fails, render as regular text
         return content.split("\n").map((line, index) => (
           <p key={`line-${index}`} className="mb-2 last:mb-0">
@@ -365,11 +365,10 @@ export function NectarAIChat({
                     className={`flex ${message.role === "assistant" ? "justify-start" : "justify-end"}`}
                   >
                     <div
-                      className={`max-w-[85%] rounded-2xl px-4 py-3 text-sm leading-relaxed shadow-sm border ${
-                        message.role === "assistant"
-                          ? "bg-blue-50 border-blue-100 text-gray-800"
-                          : "bg-blue-600 border-blue-500 text-white"
-                      }`}
+                      className={`max-w-[85%] rounded-2xl px-4 py-3 text-sm leading-relaxed shadow-sm border ${message.role === "assistant"
+                        ? "bg-blue-50 border-blue-100 text-gray-800"
+                        : "bg-blue-600 border-blue-500 text-white"
+                        }`}
                     >
                       {renderMessageContent(message.content)}
                     </div>
@@ -408,7 +407,7 @@ export function NectarAIChat({
                       onKeyDown={(event) => {
                         if (event.key === 'Enter' && !event.shiftKey) {
                           event.preventDefault();
-                          handleSubmit(event as any);
+                          handleSubmit(event as React.FormEvent);
                         }
                       }}
                       placeholder="Ask how Shudveta can elevate your next project…"

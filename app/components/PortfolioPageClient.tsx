@@ -3,12 +3,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import "../portfolio/portfolio.css";
 
 export default function PortfolioPageClient() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const projects = [
+  const projects = useMemo(() => [
     {
       id: 1,
       title: "Smart Automation Platform",
@@ -152,7 +152,7 @@ export default function PortfolioPageClient() {
       status: "Completed",
       year: "2023"
     }
-  ];
+  ], []);
 
   // Add structured data for portfolio page
   useEffect(() => {
@@ -215,7 +215,7 @@ export default function PortfolioPageClient() {
         document.head.removeChild(existingScript);
       }
     };
-  }, []);
+  }, [projects]);
 
   return (
     <div className="relative">
@@ -420,7 +420,7 @@ export default function PortfolioPageClient() {
               <div className="portfolio-card-content">
                 <div className="portfolio-card-text">
                   <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">Lubeck Elevators Website</h3>
-                  <p className="text-sm sm:text-base text-gray-600 mb-4">A fully responsive and visually refined corporate website designed to represent Lubeck Elevators' brand identity and product portfolio.</p>
+                  <p className="text-sm sm:text-base text-gray-600 mb-4">A fully responsive and visually refined corporate website designed to represent Lubeck Elevators&apos; brand identity and product portfolio.</p>
                 </div>
                 <Link href="/portfolio/1" className="w-full portfolio-button mt-auto inline-block text-center text-sm sm:text-base">
                   Read More
@@ -445,7 +445,7 @@ export default function PortfolioPageClient() {
               <div className="portfolio-card-content">
                 <div className="portfolio-card-text">
                   <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">Lubeck Exports Platform</h3>
-                  <p className="text-sm sm:text-base text-gray-600 mb-4">A comprehensive full-stack e-commerce solution developed to digitize Lubeck Exports' product catalog and sales operations.</p>
+                  <p className="text-sm sm:text-base text-gray-600 mb-4">A comprehensive full-stack e-commerce solution developed to digitize Lubeck Exports&apos; product catalog and sales operations.</p>
                 </div>
                 <Link href="/portfolio/2" className="w-full portfolio-button mt-auto inline-block text-center text-sm sm:text-base">
                   Read More
@@ -574,10 +574,10 @@ export default function PortfolioPageClient() {
             <div>
               <h4 className="text-sm font-semibold mb-3 text-gray-200">Quick Links</h4>
               <ul className="space-y-2">
-                <li><a href="#home" className="text-gray-400 hover:text-white text-xs sm:text-sm transition-colors duration-300">Home</a></li>
-                <li><a href="/portfolio" className="text-gray-400 hover:text-white text-xs sm:text-sm transition-colors duration-300">Portfolio</a></li>
-                <li><a href="#about" className="text-gray-400 hover:text-white text-xs sm:text-sm transition-colors duration-300">About Us</a></li>
-                <li><a href="/contact" className="text-gray-400 hover:text-white text-xs sm:text-sm transition-colors duration-300">Contact</a></li>
+                <li><Link href="/" className="text-gray-400 hover:text-white text-xs sm:text-sm transition-colors duration-300">Home</Link></li>
+                <li><Link href="/portfolio" className="text-gray-400 hover:text-white text-xs sm:text-sm transition-colors duration-300">Portfolio</Link></li>
+                <li><Link href="/#about" className="text-gray-400 hover:text-white text-xs sm:text-sm transition-colors duration-300">About Us</Link></li>
+                <li><Link href="/contact" className="text-gray-400 hover:text-white text-xs sm:text-sm transition-colors duration-300">Contact</Link></li>
               </ul>
             </div>
 

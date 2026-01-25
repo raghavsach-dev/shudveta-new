@@ -146,6 +146,8 @@ export default function IPD3DLogo({ width = 200, height = 200, className = '' }:
 
     window.addEventListener('resize', handleResize);
 
+    const currentMount = mountRef.current;
+
     // Cleanup
     return () => {
       isMounted = false;
@@ -161,8 +163,8 @@ export default function IPD3DLogo({ width = 200, height = 200, className = '' }:
 
       if (rendererRef.current) {
         rendererRef.current.dispose();
-        if (mountRef.current && rendererRef.current.domElement.parentElement === mountRef.current) {
-          mountRef.current.removeChild(rendererRef.current.domElement);
+        if (currentMount && rendererRef.current.domElement.parentElement === currentMount) {
+          currentMount.removeChild(rendererRef.current.domElement);
         }
       }
 

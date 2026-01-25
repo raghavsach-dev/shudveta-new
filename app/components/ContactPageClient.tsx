@@ -17,10 +17,10 @@ export default function ContactPageClient() {
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
+    setFormData(prev => ({
+      ...prev,
       [e.target.name]: e.target.value
-    });
+    }));
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -35,14 +35,16 @@ export default function ContactPageClient() {
       const urlParams = new URLSearchParams(window.location.search);
       if (urlParams.get('success') === 'true') {
         // Reset form data on success
-        setFormData({
-          name: '',
-          email: '',
-          subject: '',
-          message: ''
-        });
-        setIsSubmitting(false);
-        setShowSuccessMessage(true);
+        setTimeout(() => {
+          setFormData({
+            name: '',
+            email: '',
+            subject: '',
+            message: ''
+          });
+          setIsSubmitting(false);
+          setShowSuccessMessage(true);
+        }, 0);
         // Clean URL
         window.history.replaceState({}, '', '/contact');
         // Hide success message after 10 seconds
@@ -268,7 +270,7 @@ export default function ContactPageClient() {
             Get In Touch
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 leading-relaxed">
-            Ready to bring your ideas to life? Let's discuss your next project and create something amazing together.
+            Ready to bring your ideas to life? Let&apos;s discuss your next project and create something amazing together.
           </p>
         </div>
       </section>
@@ -281,7 +283,7 @@ export default function ContactPageClient() {
             <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#002F6C' }}>Send Us a Message</h2>
             <div className="w-20 h-1 mx-auto mb-6" style={{ backgroundColor: '#002F6C' }}></div>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Have a project in mind? We'd love to hear about it. Send us a message and we'll get back to you as soon as possible.
+              Have a project in mind? We&apos;d love to hear about it. Send us a message and we&apos;ll get back to you as soon as possible.
             </p>
           </div>
 
@@ -302,7 +304,7 @@ export default function ContactPageClient() {
                   </div>
                   <div className="ml-3">
                     <p className="text-sm font-medium text-green-800">
-                      Thank you! Your message has been sent successfully. We'll get back to you soon.
+                      Thank you! Your message has been sent successfully. We&apos;ll get back to you soon.
                     </p>
                   </div>
                 </div>
@@ -312,8 +314,8 @@ export default function ContactPageClient() {
 
           <div className="max-w-4xl mx-auto">
             <div className="bg-gray-50 p-8 md:p-12 rounded-2xl shadow-xl border border-gray-100">
-              <form 
-                action="https://formsubmit.co/shudveta@gmail.com" 
+              <form
+                action="https://formsubmit.co/shudveta@gmail.com"
                 method="POST"
                 onSubmit={handleSubmit}
                 className="space-y-6"
@@ -436,10 +438,10 @@ export default function ContactPageClient() {
             <div>
               <h4 className="text-sm font-semibold mb-3 text-gray-200">Quick Links</h4>
               <ul className="space-y-2">
-                <li><a href="#home" className="text-gray-400 hover:text-white text-xs sm:text-sm transition-colors duration-300">Home</a></li>
-                <li><a href="/portfolio" className="text-gray-400 hover:text-white text-xs sm:text-sm transition-colors duration-300">Portfolio</a></li>
-                <li><a href="#about" className="text-gray-400 hover:text-white text-xs sm:text-sm transition-colors duration-300">About Us</a></li>
-                <li><a href="/contact" className="text-gray-400 hover:text-white text-xs sm:text-sm transition-colors duration-300">Contact</a></li>
+                <li><Link href="/" className="text-gray-400 hover:text-white text-xs sm:text-sm transition-colors duration-300">Home</Link></li>
+                <li><Link href="/portfolio" className="text-gray-400 hover:text-white text-xs sm:text-sm transition-colors duration-300">Portfolio</Link></li>
+                <li><Link href="/#about" className="text-gray-400 hover:text-white text-xs sm:text-sm transition-colors duration-300">About Us</Link></li>
+                <li><Link href="/contact" className="text-gray-400 hover:text-white text-xs sm:text-sm transition-colors duration-300">Contact</Link></li>
               </ul>
             </div>
 
